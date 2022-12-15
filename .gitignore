@@ -1,0 +1,9 @@
+.idea
+__pycache__
+./Results
+Data/BehavioralCloning/Expert_BehavioralCloning_Features_5_trajectories_100000.npz
+Data/Weights/Draft
+Data/Weights/weights_dqn_*
+Data/Weights/weights_iter_*
+Data/InverseRL/Feature_4_learner_0_index_EPOCHS_100000.npz
+

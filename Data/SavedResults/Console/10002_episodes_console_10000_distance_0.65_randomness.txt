@@ -1,0 +1,3550 @@
+/usr/bin/python3.6 /home/alireza/Downloads/Inverse_RL_UAV/code/main.py
+2021-04-04 17:55:10.692382: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+ ..... Running:
+UAV communication using apprenticeship learning via Inverse Reinforcement Learning (IRL)
+Sorted Summation Number of Neighbor UEs:  [4, 5, 6, 8, 8, 8, 9, 9, 10, 10, 12, 12, 14, 14, 15, 17, 17, 17, 18, 19, 20, 21, 24, 24, 29]
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 2               
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer started.
+Quadratic to conic reformulation started.
+Quadratic to conic reformulation terminated. Time: 0.00    
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 2               
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 8               
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 2
+Optimizer  - Cones                  : 1
+Optimizer  - Scalar variables       : 8                 conic                  : 6               
+Optimizer  - Semi-definite variables: 0                 scalarized             : 0               
+Factor     - setup time             : 0.00              dense det. time        : 0.00            
+Factor     - ML order time          : 0.00              GP order time          : 0.00            
+Factor     - nonzeros before factor : 3                 after factor           : 3               
+Factor     - dense dim.             : 0                 flops                  : 4.50e+01        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   1.0e+00  0.0e+00  2.0e+00  0.00e+00   5.000000000e-01   0.000000000e+00   1.0e+00  0.02  
+1   1.5e-01  3.3e-16  2.6e-01  4.15e-01   3.138709835e-01   5.276459701e-01   1.5e-01  0.02  
+2   3.2e-02  2.2e-16  1.0e-01  -7.53e-01  4.785685758e+00   1.395660432e+01   3.2e-02  0.02  
+3   8.0e-03  4.4e-16  5.9e-03  3.88e-01   1.474868088e+01   1.484833395e+01   8.0e-03  0.02  
+4   4.7e-05  2.2e-16  5.3e-06  7.38e-01   1.991936645e+01   1.993383676e+01   4.7e-05  0.02  
+5   1.1e-09  5.3e-14  5.9e-13  9.99e-01   1.995240628e+01   1.995240662e+01   1.1e-09  0.02  
+Optimizer terminated. Time: 0.02    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 1.9952406160e+01    nrm: 2e+00    Viol.  con: 2e-08    var: 0e+00  
+  Dual.    obj: 1.9952406738e+01    nrm: 2e+01    Viol.  con: 4e-15    var: 0e+00  
+Optimization status is:  optimal
+
+weights:  [-2.4021004   1.34863359 -2.4714825   0.10312351 -2.49892918] 
+ weights_norm:  [-0.53776622  0.30192309 -0.55329902  0.0230866  -0.5594436 ] 
+
+......... TOTAL EPOCHS =  10002
+ ......... EPISODE =  200 ......... Current Time =  17:57:05  ..... ELAPSED TIME =  113.55  Seconds,  1.89  mins,  0.03  hour
+ ......... EPISODE =  400 ......... Current Time =  17:58:56  ..... ELAPSED TIME =  223.96  Seconds,  3.73  mins,  0.06  hour
+ ......... EPISODE =  600 ......... Current Time =  18:01:00  ..... ELAPSED TIME =  348.92  Seconds,  5.82  mins,  0.1  hour
+ ......... EPISODE =  800 ......... Current Time =  18:03:05  ..... ELAPSED TIME =  473.41  Seconds,  7.89  mins,  0.13  hour
+ ......... EPISODE =  1000 ......... Current Time =  18:04:57  ..... ELAPSED TIME =  585.85  Seconds,  9.76  mins,  0.16  hour
+ ......... EPISODE =  1200 ......... Current Time =  18:06:42  ..... ELAPSED TIME =  690.89  Seconds,  11.51  mins,  0.19  hour
+ ......... EPISODE =  1400 ......... Current Time =  18:08:15  ..... ELAPSED TIME =  783.81  Seconds,  13.06  mins,  0.22  hour
+ ......... EPISODE =  1600 ......... Current Time =  18:09:37  ..... ELAPSED TIME =  865.37  Seconds,  14.42  mins,  0.24  hour
+ ......... EPISODE =  1800 ......... Current Time =  18:10:42  ..... ELAPSED TIME =  930.82  Seconds,  15.51  mins,  0.26  hour
+ ......... EPISODE =  2000 ......... Current Time =  18:11:45  ..... ELAPSED TIME =  993.57  Seconds,  16.56  mins,  0.28  hour
+ ......... EPISODE =  2200 ......... Current Time =  18:12:51  ..... ELAPSED TIME =  1059.07  Seconds,  17.65  mins,  0.29  hour
+ ......... EPISODE =  2400 ......... Current Time =  18:13:46  ..... ELAPSED TIME =  1114.37  Seconds,  18.57  mins,  0.31  hour
+ ......... EPISODE =  2600 ......... Current Time =  18:14:37  ..... ELAPSED TIME =  1165.55  Seconds,  19.43  mins,  0.32  hour
+ ......... EPISODE =  2800 ......... Current Time =  18:15:26  ..... ELAPSED TIME =  1214.59  Seconds,  20.24  mins,  0.34  hour
+ ......... EPISODE =  3000 ......... Current Time =  18:16:06  ..... ELAPSED TIME =  1254.87  Seconds,  20.91  mins,  0.35  hour
+ ......... EPISODE =  3200 ......... Current Time =  18:16:46  ..... ELAPSED TIME =  1294.44  Seconds,  21.57  mins,  0.36  hour
+ ......... EPISODE =  3400 ......... Current Time =  18:17:22  ..... ELAPSED TIME =  1330.05  Seconds,  22.17  mins,  0.37  hour
+ ......... EPISODE =  3600 ......... Current Time =  18:17:58  ..... ELAPSED TIME =  1366.21  Seconds,  22.77  mins,  0.38  hour
+ ......... EPISODE =  3800 ......... Current Time =  18:18:29  ..... ELAPSED TIME =  1397.45  Seconds,  23.29  mins,  0.39  hour
+ ......... EPISODE =  4000 ......... Current Time =  18:18:58  ..... ELAPSED TIME =  1425.93  Seconds,  23.77  mins,  0.4  hour
+ ......... EPISODE =  4200 ......... Current Time =  18:19:23  ..... ELAPSED TIME =  1451.44  Seconds,  24.19  mins,  0.4  hour
+ ......... EPISODE =  4400 ......... Current Time =  18:19:51  ..... ELAPSED TIME =  1479.21  Seconds,  24.65  mins,  0.41  hour
+ ......... EPISODE =  4600 ......... Current Time =  18:20:16  ..... ELAPSED TIME =  1504.77  Seconds,  25.08  mins,  0.42  hour
+ ......... EPISODE =  4800 ......... Current Time =  18:20:39  ..... ELAPSED TIME =  1527.81  Seconds,  25.46  mins,  0.42  hour
+ ......... EPISODE =  5000 ......... Current Time =  18:21:06  ..... ELAPSED TIME =  1553.93  Seconds,  25.9  mins,  0.43  hour
+ ......... EPISODE =  5200 ......... Current Time =  18:21:29  ..... ELAPSED TIME =  1577.04  Seconds,  26.28  mins,  0.44  hour
+ ......... EPISODE =  5400 ......... Current Time =  18:21:54  ..... ELAPSED TIME =  1602.41  Seconds,  26.71  mins,  0.45  hour
+ ......... EPISODE =  5600 ......... Current Time =  18:22:19  ..... ELAPSED TIME =  1627.07  Seconds,  27.12  mins,  0.45  hour
+ ......... EPISODE =  5800 ......... Current Time =  18:22:42  ..... ELAPSED TIME =  1650.75  Seconds,  27.51  mins,  0.46  hour
+ ......... EPISODE =  6000 ......... Current Time =  18:23:06  ..... ELAPSED TIME =  1674.11  Seconds,  27.9  mins,  0.47  hour
+ ......... EPISODE =  6200 ......... Current Time =  18:23:29  ..... ELAPSED TIME =  1697.36  Seconds,  28.29  mins,  0.47  hour
+ ......... EPISODE =  6400 ......... Current Time =  18:23:53  ..... ELAPSED TIME =  1721.01  Seconds,  28.68  mins,  0.48  hour
+ ......... EPISODE =  6600 ......... Current Time =  18:24:18  ..... ELAPSED TIME =  1746.07  Seconds,  29.1  mins,  0.49  hour
+ ......... EPISODE =  6800 ......... Current Time =  18:24:42  ..... ELAPSED TIME =  1770.46  Seconds,  29.51  mins,  0.49  hour
+ ......... EPISODE =  7000 ......... Current Time =  18:25:05  ..... ELAPSED TIME =  1793.3  Seconds,  29.89  mins,  0.5  hour
+ ......... EPISODE =  7200 ......... Current Time =  18:25:29  ..... ELAPSED TIME =  1817.46  Seconds,  30.29  mins,  0.5  hour
+ ......... EPISODE =  7400 ......... Current Time =  18:25:53  ..... ELAPSED TIME =  1841.53  Seconds,  30.69  mins,  0.51  hour
+ ......... EPISODE =  7600 ......... Current Time =  18:26:17  ..... ELAPSED TIME =  1865.74  Seconds,  31.1  mins,  0.52  hour
+ ......... EPISODE =  7800 ......... Current Time =  18:26:41  ..... ELAPSED TIME =  1889.25  Seconds,  31.49  mins,  0.52  hour
+ ......... EPISODE =  8000 ......... Current Time =  18:27:04  ..... ELAPSED TIME =  1912.86  Seconds,  31.88  mins,  0.53  hour
+ ......... EPISODE =  8200 ......... Current Time =  18:27:28  ..... ELAPSED TIME =  1936.45  Seconds,  32.27  mins,  0.54  hour
+ ......... EPISODE =  8400 ......... Current Time =  18:27:53  ..... ELAPSED TIME =  1961.61  Seconds,  32.69  mins,  0.54  hour
+ ......... EPISODE =  8600 ......... Current Time =  18:28:18  ..... ELAPSED TIME =  1985.98  Seconds,  33.1  mins,  0.55  hour
+ ......... EPISODE =  8800 ......... Current Time =  18:28:41  ..... ELAPSED TIME =  2009.86  Seconds,  33.5  mins,  0.56  hour
+ ......... EPISODE =  9000 ......... Current Time =  18:29:05  ..... ELAPSED TIME =  2033.44  Seconds,  33.89  mins,  0.56  hour
+ ......... EPISODE =  9200 ......... Current Time =  18:29:29  ..... ELAPSED TIME =  2057.84  Seconds,  34.3  mins,  0.57  hour
+ ......... EPISODE =  9400 ......... Current Time =  18:29:52  ..... ELAPSED TIME =  2079.96  Seconds,  34.67  mins,  0.58  hour
+ ......... EPISODE =  9600 ......... Current Time =  18:30:12  ..... ELAPSED TIME =  2100.7  Seconds,  35.01  mins,  0.58  hour
+ ......... EPISODE =  9800 ......... Current Time =  18:30:37  ..... ELAPSED TIME =  2125.06  Seconds,  35.42  mins,  0.59  hour
+ ......... EPISODE =  10000 ......... Current Time =  18:31:02  ..... ELAPSED TIME =  2149.97  Seconds,  35.83  mins,  0.6  hour
+......... TOTAL RUNs =  1
+
+********** INFO:
+ Episode:  1 
+ Distance:  0 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.0 
+ Throughput:  0.0 
+ Interference on Neighbor UEs:  0.0
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ New Cell: 1 
+ Next State 
+ Action_power:  50.0 
+ Interference on UAV:  6.688022370579558 
+ SINR:  0.02081159396885814 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  1.0235150674496603
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ Current Cell: 1 
+ Current State 
+ Interference on UAV:  6.688022370579558 
+ SINR:  0.02081159396885814 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  1.0235150674496603
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ New Cell: 2 
+ Next State 
+ Action_power:  50.0 
+ Interference on UAV:  10.339941628823224 
+ SINR:  0.014109420069087572 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  1.2926313901816178
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ Current Cell: 2 
+ Current State 
+ Interference on UAV:  10.339941628823224 
+ SINR:  0.014109420069087572 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  1.2926313901816178
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ New Cell: 8 
+ Next State 
+ Action_power:  100.0 
+ Interference on UAV:  6.350193369449842 
+ SINR:  0.043536269580340556 
+ Throughput:  0.40053792958372886 
+ Interference on Neighbor UEs:  3.3982353781055448
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ Current Cell: 8 
+ Current State 
+ Interference on UAV:  6.350193369449842 
+ SINR:  0.043536269580340556 
+ Throughput:  0.40053792958372886 
+ Interference on Neighbor UEs:  3.3982353781055448
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ New Cell: 13 
+ Next State 
+ Action_power:  100.0 
+ Interference on UAV:  5.274095186736932 
+ SINR:  0.05100337028301088 
+ Throughput:  0.40053792958372886 
+ Interference on Neighbor UEs:  3.368934112862606
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ Current Cell: 13 
+ Current State 
+ Interference on UAV:  5.274095186736932 
+ SINR:  0.05100337028301088 
+ Throughput:  0.40053792958372886 
+ Interference on Neighbor UEs:  3.368934112862606
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ New Cell: 19 
+ Next State 
+ Action_power:  100.0 
+ Interference on UAV:  2.9247402265555995 
+ SINR:  0.08153405869637287 
+ Throughput:  0.40053792958372886 
+ Interference on Neighbor UEs:  2.11964899681315
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ Current Cell: 19 
+ Current State 
+ Interference on UAV:  2.9247402265555995 
+ SINR:  0.08153405869637287 
+ Throughput:  0.40053792958372886 
+ Interference on Neighbor UEs:  2.11964899681315
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ New Cell: 24 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  2.0645581503861927 
+ SINR:  0.20883924161117576 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  2.406127156276537
+
+tested_policy_feature_expectation:  [1.52638964 4.97504995 0.4437753  2.11700763 0.11784582]
+
+weights:  [-2.4021004   1.34863359 -2.4714825   0.10312351 -2.49892918] 
+ weights_norm:  [-0.53776622  0.30192309 -0.55329902  0.0230866  -0.5594436 ] 
+
+...... Learner =  0   Hyper Distance =  0.1947743531591942
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 3               
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer started.
+Quadratic to conic reformulation started.
+Quadratic to conic reformulation terminated. Time: 0.00    
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 3               
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 8               
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 3
+Optimizer  - Cones                  : 1
+Optimizer  - Scalar variables       : 9                 conic                  : 6               
+Optimizer  - Semi-definite variables: 0                 scalarized             : 0               
+Factor     - setup time             : 0.00              dense det. time        : 0.00            
+Factor     - ML order time          : 0.00              GP order time          : 0.00            
+Factor     - nonzeros before factor : 6                 after factor           : 6               
+Factor     - dense dim.             : 0                 flops                  : 9.20e+01        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   1.0e+00  0.0e+00  2.0e+00  0.00e+00   5.000000000e-01   0.000000000e+00   1.0e+00  0.03  
+1   1.4e-01  4.4e-16  2.8e-01  1.99e-01   7.695799947e-01   1.321023219e+00   1.4e-01  0.03  
+2   4.0e-02  6.7e-16  1.2e-01  -5.15e-01  7.436129452e+00   1.586472565e+01   4.0e-02  0.03  
+3   9.7e-03  4.4e-16  8.6e-03  5.91e-01   1.677578658e+01   1.720310874e+01   9.7e-03  0.03  
+4   1.1e-03  6.4e-16  3.6e-04  7.77e-01   2.146605158e+01   2.153590148e+01   1.1e-03  0.03  
+5   1.4e-04  1.3e-15  1.7e-05  9.91e-01   2.175931844e+01   2.177023386e+01   1.4e-04  0.03  
+6   4.4e-06  5.0e-16  9.3e-08  9.98e-01   2.181436834e+01   2.181471281e+01   4.4e-06  0.03  
+7   2.6e-07  4.1e-14  1.3e-09  1.00e+00   2.181682254e+01   2.181684322e+01   2.6e-07  0.03  
+8   6.0e-09  2.3e-14  4.8e-12  1.00e+00   2.181699215e+01   2.181699263e+01   6.0e-09  0.03  
+9   3.9e-11  1.7e-12  2.6e-15  1.00e+00   2.181699641e+01   2.181699642e+01   3.9e-11  0.03  
+Optimizer terminated. Time: 0.03    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 2.1816996413e+01    nrm: 3e+00    Viol.  con: 5e-10    var: 0e+00  
+  Dual.    obj: 2.1816996417e+01    nrm: 2e+01    Viol.  con: 4e-15    var: 2e-05  
+Optimization status is:  optimal
+
+weights:  [-2.5851785   0.43840106 -2.72097447  1.0723963  -2.52743292] 
+ weights_norm:  [-0.55346869  0.09385861 -0.58254166  0.22959257 -0.54110576] 
+
+......... TOTAL EPOCHS =  10002
+ ......... EPISODE =  200 ......... Current Time =  18:33:06  ..... ELAPSED TIME =  124.39  Seconds,  2.07  mins,  0.03  hour
+ ......... EPISODE =  400 ......... Current Time =  18:35:02  ..... ELAPSED TIME =  240.09  Seconds,  4.0  mins,  0.07  hour
+ ......... EPISODE =  600 ......... Current Time =  18:37:07  ..... ELAPSED TIME =  365.36  Seconds,  6.09  mins,  0.1  hour
+ ......... EPISODE =  800 ......... Current Time =  18:39:06  ..... ELAPSED TIME =  483.91  Seconds,  8.07  mins,  0.13  hour
+ ......... EPISODE =  1000 ......... Current Time =  18:41:05  ..... ELAPSED TIME =  603.4  Seconds,  10.06  mins,  0.17  hour
+ ......... EPISODE =  1200 ......... Current Time =  18:42:44  ..... ELAPSED TIME =  701.97  Seconds,  11.7  mins,  0.19  hour
+ ......... EPISODE =  1400 ......... Current Time =  18:44:21  ..... ELAPSED TIME =  799.11  Seconds,  13.32  mins,  0.22  hour
+ ......... EPISODE =  1600 ......... Current Time =  18:45:46  ..... ELAPSED TIME =  884.6  Seconds,  14.74  mins,  0.25  hour
+ ......... EPISODE =  1800 ......... Current Time =  18:47:09  ..... ELAPSED TIME =  966.85  Seconds,  16.11  mins,  0.27  hour
+ ......... EPISODE =  2000 ......... Current Time =  18:48:23  ..... ELAPSED TIME =  1041.15  Seconds,  17.35  mins,  0.29  hour
+ ......... EPISODE =  2200 ......... Current Time =  18:49:28  ..... ELAPSED TIME =  1106.08  Seconds,  18.43  mins,  0.31  hour
+ ......... EPISODE =  2400 ......... Current Time =  18:50:30  ..... ELAPSED TIME =  1168.56  Seconds,  19.48  mins,  0.32  hour
+ ......... EPISODE =  2600 ......... Current Time =  18:51:32  ..... ELAPSED TIME =  1229.85  Seconds,  20.5  mins,  0.34  hour
+ ......... EPISODE =  2800 ......... Current Time =  18:52:23  ..... ELAPSED TIME =  1281.3  Seconds,  21.35  mins,  0.36  hour
+ ......... EPISODE =  3000 ......... Current Time =  18:53:15  ..... ELAPSED TIME =  1333.42  Seconds,  22.22  mins,  0.37  hour
+ ......... EPISODE =  3200 ......... Current Time =  18:54:01  ..... ELAPSED TIME =  1378.69  Seconds,  22.98  mins,  0.38  hour
+ ......... EPISODE =  3400 ......... Current Time =  18:54:42  ..... ELAPSED TIME =  1419.72  Seconds,  23.66  mins,  0.39  hour
+ ......... EPISODE =  3600 ......... Current Time =  18:55:20  ..... ELAPSED TIME =  1457.9  Seconds,  24.3  mins,  0.4  hour
+ ......... EPISODE =  3800 ......... Current Time =  18:55:54  ..... ELAPSED TIME =  1491.75  Seconds,  24.86  mins,  0.41  hour
+ ......... EPISODE =  4000 ......... Current Time =  18:56:28  ..... ELAPSED TIME =  1526.22  Seconds,  25.44  mins,  0.42  hour
+ ......... EPISODE =  4200 ......... Current Time =  18:57:01  ..... ELAPSED TIME =  1558.86  Seconds,  25.98  mins,  0.43  hour
+ ......... EPISODE =  4400 ......... Current Time =  18:57:32  ..... ELAPSED TIME =  1590.46  Seconds,  26.51  mins,  0.44  hour
+ ......... EPISODE =  4600 ......... Current Time =  18:58:03  ..... ELAPSED TIME =  1620.98  Seconds,  27.02  mins,  0.45  hour
+ ......... EPISODE =  4800 ......... Current Time =  18:58:33  ..... ELAPSED TIME =  1651.37  Seconds,  27.52  mins,  0.46  hour
+ ......... EPISODE =  5000 ......... Current Time =  18:59:05  ..... ELAPSED TIME =  1683.29  Seconds,  28.05  mins,  0.47  hour
+ ......... EPISODE =  5200 ......... Current Time =  18:59:32  ..... ELAPSED TIME =  1710.02  Seconds,  28.5  mins,  0.48  hour
+ ......... EPISODE =  5400 ......... Current Time =  19:00:03  ..... ELAPSED TIME =  1741.18  Seconds,  29.02  mins,  0.48  hour
+ ......... EPISODE =  5600 ......... Current Time =  19:00:37  ..... ELAPSED TIME =  1775.29  Seconds,  29.59  mins,  0.49  hour
+ ......... EPISODE =  5800 ......... Current Time =  19:01:15  ..... ELAPSED TIME =  1813.23  Seconds,  30.22  mins,  0.5  hour
+ ......... EPISODE =  6000 ......... Current Time =  19:01:48  ..... ELAPSED TIME =  1846.53  Seconds,  30.78  mins,  0.51  hour
+ ......... EPISODE =  6200 ......... Current Time =  19:02:23  ..... ELAPSED TIME =  1881.11  Seconds,  31.35  mins,  0.52  hour
+ ......... EPISODE =  6400 ......... Current Time =  19:02:56  ..... ELAPSED TIME =  1913.99  Seconds,  31.9  mins,  0.53  hour
+ ......... EPISODE =  6600 ......... Current Time =  19:03:31  ..... ELAPSED TIME =  1948.81  Seconds,  32.48  mins,  0.54  hour
+ ......... EPISODE =  6800 ......... Current Time =  19:04:07  ..... ELAPSED TIME =  1984.7  Seconds,  33.08  mins,  0.55  hour
+ ......... EPISODE =  7000 ......... Current Time =  19:04:38  ..... ELAPSED TIME =  2016.33  Seconds,  33.61  mins,  0.56  hour
+ ......... EPISODE =  7200 ......... Current Time =  19:05:07  ..... ELAPSED TIME =  2045.6  Seconds,  34.09  mins,  0.57  hour
+ ......... EPISODE =  7400 ......... Current Time =  19:05:39  ..... ELAPSED TIME =  2076.7  Seconds,  34.61  mins,  0.58  hour
+ ......... EPISODE =  7600 ......... Current Time =  19:06:13  ..... ELAPSED TIME =  2111.45  Seconds,  35.19  mins,  0.59  hour
+ ......... EPISODE =  7800 ......... Current Time =  19:06:44  ..... ELAPSED TIME =  2142.53  Seconds,  35.71  mins,  0.6  hour
+ ......... EPISODE =  8000 ......... Current Time =  19:07:17  ..... ELAPSED TIME =  2174.78  Seconds,  36.25  mins,  0.6  hour
+ ......... EPISODE =  8200 ......... Current Time =  19:07:48  ..... ELAPSED TIME =  2206.3  Seconds,  36.77  mins,  0.61  hour
+ ......... EPISODE =  8400 ......... Current Time =  19:08:22  ..... ELAPSED TIME =  2240.21  Seconds,  37.34  mins,  0.62  hour
+ ......... EPISODE =  8600 ......... Current Time =  19:08:54  ..... ELAPSED TIME =  2272.43  Seconds,  37.87  mins,  0.63  hour
+ ......... EPISODE =  8800 ......... Current Time =  19:09:26  ..... ELAPSED TIME =  2304.57  Seconds,  38.41  mins,  0.64  hour
+ ......... EPISODE =  9000 ......... Current Time =  19:09:57  ..... ELAPSED TIME =  2335.32  Seconds,  38.92  mins,  0.65  hour
+ ......... EPISODE =  9200 ......... Current Time =  19:10:31  ..... ELAPSED TIME =  2369.4  Seconds,  39.49  mins,  0.66  hour
+ ......... EPISODE =  9400 ......... Current Time =  19:11:03  ..... ELAPSED TIME =  2400.94  Seconds,  40.02  mins,  0.67  hour
+ ......... EPISODE =  9600 ......... Current Time =  19:11:33  ..... ELAPSED TIME =  2430.91  Seconds,  40.52  mins,  0.68  hour
+ ......... EPISODE =  9800 ......... Current Time =  19:12:07  ..... ELAPSED TIME =  2465.17  Seconds,  41.09  mins,  0.68  hour
+ ......... EPISODE =  10000 ......... Current Time =  19:12:37  ..... ELAPSED TIME =  2495.18  Seconds,  41.59  mins,  0.69  hour
+......... TOTAL RUNs =  1
+
+********** INFO:
+ Episode:  1 
+ Distance:  0 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.0 
+ Throughput:  0.0 
+ Interference on Neighbor UEs:  0.0
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ New Cell: 1 
+ Next State 
+ Action_power:  150.0 
+ Interference on UAV:  6.688022370579558 
+ SINR:  0.06243478190657443 
+ Throughput:  0.5655971758542251 
+ Interference on Neighbor UEs:  3.070545202348981
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ Current Cell: 1 
+ Current State 
+ Interference on UAV:  6.688022370579558 
+ SINR:  0.06243478190657443 
+ Throughput:  0.5655971758542251 
+ Interference on Neighbor UEs:  3.070545202348981
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ New Cell: 2 
+ Next State 
+ Action_power:  150.0 
+ Interference on UAV:  10.339941628823224 
+ SINR:  0.04232826020726271 
+ Throughput:  0.5655971758542251 
+ Interference on Neighbor UEs:  3.8778941705448537
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ Current Cell: 2 
+ Current State 
+ Interference on UAV:  10.339941628823224 
+ SINR:  0.04232826020726271 
+ Throughput:  0.5655971758542251 
+ Interference on Neighbor UEs:  3.8778941705448537
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ New Cell: 8 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  6.350193369449842 
+ SINR:  0.08707253916068111 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.7964707562110895
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ Current Cell: 8 
+ Current State 
+ Interference on UAV:  6.350193369449842 
+ SINR:  0.08707253916068111 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.7964707562110895
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ New Cell: 13 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.274095186736932 
+ SINR:  0.10200674056602176 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.737868225725212
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ Current Cell: 13 
+ Current State 
+ Interference on UAV:  5.274095186736932 
+ SINR:  0.10200674056602176 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.737868225725212
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ New Cell: 19 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  2.9247402265555995 
+ SINR:  0.16306811739274574 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.2392979936263
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ Current Cell: 19 
+ Current State 
+ Interference on UAV:  2.9247402265555995 
+ SINR:  0.16306811739274574 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.2392979936263
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ New Cell: 23 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ Current Cell: 23 
+ Current State 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ New Cell: 23 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ Current Cell: 23 
+ Current State 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  8 
+ New Cell: 23 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+tested_policy_feature_expectation:  [1.60922425 0.         0.56146512 7.22851037 0.79388042]
+
+weights:  [-2.5851785   0.43840106 -2.72097447  1.0723963  -2.52743292] 
+ weights_norm:  [-0.55346869  0.09385861 -0.58254166  0.22959257 -0.54110576] 
+
+...... Learner =  1   Hyper Distance =  0.20178608693770217
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 4               
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer started.
+Quadratic to conic reformulation started.
+Quadratic to conic reformulation terminated. Time: 0.00    
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 4               
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 8               
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 4
+Optimizer  - Cones                  : 1
+Optimizer  - Scalar variables       : 10                conic                  : 6               
+Optimizer  - Semi-definite variables: 0                 scalarized             : 0               
+Factor     - setup time             : 0.00              dense det. time        : 0.00            
+Factor     - ML order time          : 0.00              GP order time          : 0.00            
+Factor     - nonzeros before factor : 10                after factor           : 10              
+Factor     - dense dim.             : 0                 flops                  : 1.50e+02        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   1.0e+00  0.0e+00  2.0e+00  0.00e+00   5.000000000e-01   0.000000000e+00   1.0e+00  0.02  
+1   1.1e-01  1.1e-16  2.8e-01  8.48e-02   1.534816575e+00   3.415603602e+00   1.1e-01  0.02  
+2   3.1e-02  2.2e-16  9.8e-02  -6.52e-01  1.063942205e+01   2.245996942e+01   3.1e-02  0.02  
+3   3.2e-03  3.2e-16  1.5e-03  7.64e-01   2.463696002e+01   2.472295339e+01   3.2e-03  0.02  
+4   3.3e-04  4.4e-16  5.6e-05  8.58e-01   2.753635049e+01   2.755594002e+01   3.3e-04  0.02  
+5   6.6e-05  6.4e-16  5.4e-06  9.79e-01   2.779557045e+01   2.780038253e+01   6.6e-05  0.02  
+6   1.0e-05  1.9e-15  3.9e-07  9.95e-01   2.783904101e+01   2.784058936e+01   1.0e-05  0.02  
+7   5.8e-08  7.2e-15  1.6e-10  9.99e-01   2.785031252e+01   2.785032124e+01   5.8e-08  0.02  
+8   1.8e-09  8.0e-14  9.4e-13  1.00e+00   2.785036992e+01   2.785037020e+01   1.8e-09  0.02  
+Optimizer terminated. Time: 0.02    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 2.7850369350e+01    nrm: 4e+00    Viol.  con: 5e-08    var: 0e+00  
+  Dual.    obj: 2.7850370775e+01    nrm: 2e+01    Viol.  con: 7e-15    var: 8e-04  
+Optimization status is:  optimal
+
+weights:  [-2.29985378  0.55786386 -4.3900043   0.8778075  -1.48564669] 
+ weights_norm:  [-0.43579751  0.10570919 -0.83185851  0.16633506 -0.28151404] 
+
+......... TOTAL EPOCHS =  10002
+ ......... EPISODE =  200 ......... Current Time =  19:14:43  ..... ELAPSED TIME =  125.09  Seconds,  2.08  mins,  0.03  hour
+ ......... EPISODE =  400 ......... Current Time =  19:16:48  ..... ELAPSED TIME =  250.84  Seconds,  4.18  mins,  0.07  hour
+ ......... EPISODE =  600 ......... Current Time =  19:18:45  ..... ELAPSED TIME =  367.83  Seconds,  6.13  mins,  0.1  hour
+ ......... EPISODE =  800 ......... Current Time =  19:20:34  ..... ELAPSED TIME =  476.04  Seconds,  7.93  mins,  0.13  hour
+ ......... EPISODE =  1000 ......... Current Time =  19:22:28  ..... ELAPSED TIME =  590.87  Seconds,  9.85  mins,  0.16  hour
+ ......... EPISODE =  1200 ......... Current Time =  19:24:25  ..... ELAPSED TIME =  707.29  Seconds,  11.79  mins,  0.2  hour
+ ......... EPISODE =  1400 ......... Current Time =  19:26:12  ..... ELAPSED TIME =  814.21  Seconds,  13.57  mins,  0.23  hour
+ ......... EPISODE =  1600 ......... Current Time =  19:27:35  ..... ELAPSED TIME =  897.77  Seconds,  14.96  mins,  0.25  hour
+ ......... EPISODE =  1800 ......... Current Time =  19:28:50  ..... ELAPSED TIME =  972.13  Seconds,  16.2  mins,  0.27  hour
+ ......... EPISODE =  2000 ......... Current Time =  19:29:59  ..... ELAPSED TIME =  1041.57  Seconds,  17.36  mins,  0.29  hour
+ ......... EPISODE =  2200 ......... Current Time =  19:31:02  ..... ELAPSED TIME =  1104.89  Seconds,  18.41  mins,  0.31  hour
+ ......... EPISODE =  2400 ......... Current Time =  19:32:03  ..... ELAPSED TIME =  1165.94  Seconds,  19.43  mins,  0.32  hour
+ ......... EPISODE =  2600 ......... Current Time =  19:32:56  ..... ELAPSED TIME =  1218.16  Seconds,  20.3  mins,  0.34  hour
+ ......... EPISODE =  2800 ......... Current Time =  19:33:44  ..... ELAPSED TIME =  1266.37  Seconds,  21.11  mins,  0.35  hour
+ ......... EPISODE =  3000 ......... Current Time =  19:34:31  ..... ELAPSED TIME =  1313.56  Seconds,  21.89  mins,  0.36  hour
+ ......... EPISODE =  3200 ......... Current Time =  19:35:18  ..... ELAPSED TIME =  1360.64  Seconds,  22.68  mins,  0.38  hour
+ ......... EPISODE =  3400 ......... Current Time =  19:35:57  ..... ELAPSED TIME =  1399.47  Seconds,  23.32  mins,  0.39  hour
+ ......... EPISODE =  3600 ......... Current Time =  19:36:36  ..... ELAPSED TIME =  1438.21  Seconds,  23.97  mins,  0.4  hour
+ ......... EPISODE =  3800 ......... Current Time =  19:37:16  ..... ELAPSED TIME =  1478.12  Seconds,  24.64  mins,  0.41  hour
+ ......... EPISODE =  4000 ......... Current Time =  19:37:52  ..... ELAPSED TIME =  1514.38  Seconds,  25.24  mins,  0.42  hour
+ ......... EPISODE =  4200 ......... Current Time =  19:38:25  ..... ELAPSED TIME =  1547.75  Seconds,  25.8  mins,  0.43  hour
+ ......... EPISODE =  4400 ......... Current Time =  19:38:57  ..... ELAPSED TIME =  1579.61  Seconds,  26.33  mins,  0.44  hour
+ ......... EPISODE =  4600 ......... Current Time =  19:39:27  ..... ELAPSED TIME =  1609.91  Seconds,  26.83  mins,  0.45  hour
+ ......... EPISODE =  4800 ......... Current Time =  19:39:56  ..... ELAPSED TIME =  1638.49  Seconds,  27.31  mins,  0.46  hour
+ ......... EPISODE =  5000 ......... Current Time =  19:40:25  ..... ELAPSED TIME =  1667.78  Seconds,  27.8  mins,  0.46  hour
+ ......... EPISODE =  5200 ......... Current Time =  19:40:54  ..... ELAPSED TIME =  1696.73  Seconds,  28.28  mins,  0.47  hour
+ ......... EPISODE =  5400 ......... Current Time =  19:41:26  ..... ELAPSED TIME =  1728.21  Seconds,  28.8  mins,  0.48  hour
+ ......... EPISODE =  5600 ......... Current Time =  19:41:53  ..... ELAPSED TIME =  1755.93  Seconds,  29.27  mins,  0.49  hour
+ ......... EPISODE =  5800 ......... Current Time =  19:42:22  ..... ELAPSED TIME =  1784.51  Seconds,  29.74  mins,  0.5  hour
+ ......... EPISODE =  6000 ......... Current Time =  19:42:50  ..... ELAPSED TIME =  1812.46  Seconds,  30.21  mins,  0.5  hour
+ ......... EPISODE =  6200 ......... Current Time =  19:43:21  ..... ELAPSED TIME =  1842.96  Seconds,  30.72  mins,  0.51  hour
+ ......... EPISODE =  6400 ......... Current Time =  19:43:49  ..... ELAPSED TIME =  1871.74  Seconds,  31.2  mins,  0.52  hour
+ ......... EPISODE =  6600 ......... Current Time =  19:44:20  ..... ELAPSED TIME =  1902.55  Seconds,  31.71  mins,  0.53  hour
+ ......... EPISODE =  6800 ......... Current Time =  19:44:46  ..... ELAPSED TIME =  1928.0  Seconds,  32.13  mins,  0.54  hour
+ ......... EPISODE =  7000 ......... Current Time =  19:45:12  ..... ELAPSED TIME =  1954.53  Seconds,  32.58  mins,  0.54  hour
+ ......... EPISODE =  7200 ......... Current Time =  19:45:39  ..... ELAPSED TIME =  1981.83  Seconds,  33.03  mins,  0.55  hour
+ ......... EPISODE =  7400 ......... Current Time =  19:46:07  ..... ELAPSED TIME =  2009.39  Seconds,  33.49  mins,  0.56  hour
+ ......... EPISODE =  7600 ......... Current Time =  19:46:36  ..... ELAPSED TIME =  2038.86  Seconds,  33.98  mins,  0.57  hour
+ ......... EPISODE =  7800 ......... Current Time =  19:47:04  ..... ELAPSED TIME =  2066.11  Seconds,  34.44  mins,  0.57  hour
+ ......... EPISODE =  8000 ......... Current Time =  19:47:32  ..... ELAPSED TIME =  2094.5  Seconds,  34.91  mins,  0.58  hour
+ ......... EPISODE =  8200 ......... Current Time =  19:48:01  ..... ELAPSED TIME =  2123.18  Seconds,  35.39  mins,  0.59  hour
+ ......... EPISODE =  8400 ......... Current Time =  19:48:28  ..... ELAPSED TIME =  2150.79  Seconds,  35.85  mins,  0.6  hour
+ ......... EPISODE =  8600 ......... Current Time =  19:48:55  ..... ELAPSED TIME =  2177.36  Seconds,  36.29  mins,  0.6  hour
+ ......... EPISODE =  8800 ......... Current Time =  19:49:23  ..... ELAPSED TIME =  2205.21  Seconds,  36.75  mins,  0.61  hour
+ ......... EPISODE =  9000 ......... Current Time =  19:49:50  ..... ELAPSED TIME =  2231.97  Seconds,  37.2  mins,  0.62  hour
+ ......... EPISODE =  9200 ......... Current Time =  19:50:19  ..... ELAPSED TIME =  2261.41  Seconds,  37.69  mins,  0.63  hour
+ ......... EPISODE =  9400 ......... Current Time =  19:50:47  ..... ELAPSED TIME =  2289.56  Seconds,  38.16  mins,  0.64  hour
+ ......... EPISODE =  9600 ......... Current Time =  19:51:17  ..... ELAPSED TIME =  2319.26  Seconds,  38.65  mins,  0.64  hour
+ ......... EPISODE =  9800 ......... Current Time =  19:51:43  ..... ELAPSED TIME =  2345.49  Seconds,  39.09  mins,  0.65  hour
+ ......... EPISODE =  10000 ......... Current Time =  19:52:11  ..... ELAPSED TIME =  2373.53  Seconds,  39.56  mins,  0.66  hour
+......... TOTAL RUNs =  1
+
+********** INFO:
+ Episode:  1 
+ Distance:  0 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.0 
+ Throughput:  0.0 
+ Interference on Neighbor UEs:  0.0
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ New Cell: 1 
+ Next State 
+ Action_power:  150.0 
+ Interference on UAV:  6.688022370579558 
+ SINR:  0.06243478190657443 
+ Throughput:  0.5655971758542251 
+ Interference on Neighbor UEs:  3.070545202348981
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ Current Cell: 1 
+ Current State 
+ Interference on UAV:  6.688022370579558 
+ SINR:  0.06243478190657443 
+ Throughput:  0.5655971758542251 
+ Interference on Neighbor UEs:  3.070545202348981
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ New Cell: 2 
+ Next State 
+ Action_power:  150.0 
+ Interference on UAV:  10.339941628823224 
+ SINR:  0.04232826020726271 
+ Throughput:  0.5655971758542251 
+ Interference on Neighbor UEs:  3.8778941705448537
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ Current Cell: 2 
+ Current State 
+ Interference on UAV:  10.339941628823224 
+ SINR:  0.04232826020726271 
+ Throughput:  0.5655971758542251 
+ Interference on Neighbor UEs:  3.8778941705448537
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ New Cell: 8 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  6.350193369449842 
+ SINR:  0.08707253916068111 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.7964707562110895
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ Current Cell: 8 
+ Current State 
+ Interference on UAV:  6.350193369449842 
+ SINR:  0.08707253916068111 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.7964707562110895
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ New Cell: 13 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.274095186736932 
+ SINR:  0.10200674056602176 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.737868225725212
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ Current Cell: 13 
+ Current State 
+ Interference on UAV:  5.274095186736932 
+ SINR:  0.10200674056602176 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.737868225725212
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ New Cell: 14 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  7.371953311489795 
+ SINR:  0.07644572015489555 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  3.1315901669017636
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ Current Cell: 14 
+ Current State 
+ Interference on UAV:  7.371953311489795 
+ SINR:  0.07644572015489555 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  3.1315901669017636
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ New Cell: 19 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  2.9247402265555995 
+ SINR:  0.16306811739274574 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.2392979936263
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ Current Cell: 19 
+ Current State 
+ Interference on UAV:  2.9247402265555995 
+ SINR:  0.16306811739274574 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.2392979936263
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ New Cell: 23 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ Current Cell: 23 
+ Current State 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  8 
+ New Cell: 23 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+tested_policy_feature_expectation:  [1.69222475 0.         0.52799932 7.22851037 0.74720234]
+
+weights:  [-2.29985378  0.55786386 -4.3900043   0.8778075  -1.48564669] 
+ weights_norm:  [-0.43579751  0.10570919 -0.83185851  0.16633506 -0.28151404] 
+
+...... Learner =  2   Hyper Distance =  0.37417049598206165
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 5               
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer started.
+Quadratic to conic reformulation started.
+Quadratic to conic reformulation terminated. Time: 0.00    
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 5               
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 8               
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 5
+Optimizer  - Cones                  : 1
+Optimizer  - Scalar variables       : 11                conic                  : 6               
+Optimizer  - Semi-definite variables: 0                 scalarized             : 0               
+Factor     - setup time             : 0.00              dense det. time        : 0.00            
+Factor     - ML order time          : 0.00              GP order time          : 0.00            
+Factor     - nonzeros before factor : 15                after factor           : 15              
+Factor     - dense dim.             : 0                 flops                  : 2.27e+02        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   1.0e+00  0.0e+00  2.0e+00  0.00e+00   5.000000000e-01   0.000000000e+00   1.0e+00  0.01  
+1   1.8e-01  2.2e-16  4.1e-01  1.03e-02   1.720895547e+00   2.713892891e+00   1.8e-01  0.01  
+2   5.2e-02  1.2e-16  1.6e-01  -7.42e-01  1.153688688e+01   2.244764949e+01   5.2e-02  0.01  
+3   5.9e-03  4.0e-16  3.2e-03  8.07e-01   2.471007216e+01   2.474454830e+01   5.9e-03  0.01  
+4   5.6e-04  2.2e-16  1.0e-04  8.87e-01   2.745417163e+01   2.746570626e+01   5.6e-04  0.01  
+5   1.2e-04  1.1e-15  1.0e-05  9.69e-01   2.783541203e+01   2.783874851e+01   1.2e-04  0.01  
+6   2.3e-05  1.4e-16  1.1e-06  9.93e-01   2.789569601e+01   2.789795094e+01   2.3e-05  0.01  
+7   7.4e-08  8.9e-15  2.1e-10  9.98e-01   2.791598918e+01   2.791599715e+01   7.4e-08  0.01  
+8   2.2e-09  1.2e-13  1.1e-12  1.00e+00   2.791605109e+01   2.791605133e+01   2.2e-09  0.01  
+Optimizer terminated. Time: 0.01    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 2.7916050851e+01    nrm: 4e+00    Viol.  con: 7e-08    var: 0e+00  
+  Dual.    obj: 2.7916051563e+01    nrm: 2e+01    Viol.  con: 7e-15    var: 1e-03  
+Optimization status is:  optimal
+
+weights:  [-2.5069148   0.60007411 -4.31095122  0.90472577 -1.36693489] 
+ weights_norm:  [-0.47447418  0.11357373 -0.81591726  0.17123399 -0.25871454] 
+
+......... TOTAL EPOCHS =  10002
+ ......... EPISODE =  200 ......... Current Time =  19:54:20  ..... ELAPSED TIME =  129.08  Seconds,  2.15  mins,  0.04  hour
+ ......... EPISODE =  400 ......... Current Time =  19:56:15  ..... ELAPSED TIME =  243.12  Seconds,  4.05  mins,  0.07  hour
+ ......... EPISODE =  600 ......... Current Time =  19:58:15  ..... ELAPSED TIME =  363.64  Seconds,  6.06  mins,  0.1  hour
+ ......... EPISODE =  800 ......... Current Time =  20:00:05  ..... ELAPSED TIME =  473.24  Seconds,  7.89  mins,  0.13  hour
+ ......... EPISODE =  1000 ......... Current Time =  20:02:09  ..... ELAPSED TIME =  597.85  Seconds,  9.96  mins,  0.17  hour
+ ......... EPISODE =  1200 ......... Current Time =  20:03:41  ..... ELAPSED TIME =  689.66  Seconds,  11.49  mins,  0.19  hour
+ ......... EPISODE =  1400 ......... Current Time =  20:05:18  ..... ELAPSED TIME =  786.61  Seconds,  13.11  mins,  0.22  hour
+ ......... EPISODE =  1600 ......... Current Time =  20:06:45  ..... ELAPSED TIME =  873.75  Seconds,  14.56  mins,  0.24  hour
+ ......... EPISODE =  1800 ......... Current Time =  20:07:59  ..... ELAPSED TIME =  947.85  Seconds,  15.8  mins,  0.26  hour
+ ......... EPISODE =  2000 ......... Current Time =  20:09:06  ..... ELAPSED TIME =  1014.56  Seconds,  16.91  mins,  0.28  hour
+ ......... EPISODE =  2200 ......... Current Time =  20:10:11  ..... ELAPSED TIME =  1079.13  Seconds,  17.99  mins,  0.3  hour
+ ......... EPISODE =  2400 ......... Current Time =  20:11:07  ..... ELAPSED TIME =  1135.89  Seconds,  18.93  mins,  0.32  hour
+ ......... EPISODE =  2600 ......... Current Time =  20:12:02  ..... ELAPSED TIME =  1190.27  Seconds,  19.84  mins,  0.33  hour
+ ......... EPISODE =  2800 ......... Current Time =  20:12:52  ..... ELAPSED TIME =  1240.49  Seconds,  20.67  mins,  0.34  hour
+ ......... EPISODE =  3000 ......... Current Time =  20:13:40  ..... ELAPSED TIME =  1288.39  Seconds,  21.47  mins,  0.36  hour
+ ......... EPISODE =  3200 ......... Current Time =  20:14:21  ..... ELAPSED TIME =  1329.88  Seconds,  22.16  mins,  0.37  hour
+ ......... EPISODE =  3400 ......... Current Time =  20:15:03  ..... ELAPSED TIME =  1371.9  Seconds,  22.87  mins,  0.38  hour
+ ......... EPISODE =  3600 ......... Current Time =  20:15:41  ..... ELAPSED TIME =  1410.1  Seconds,  23.5  mins,  0.39  hour
+ ......... EPISODE =  3800 ......... Current Time =  20:16:22  ..... ELAPSED TIME =  1450.39  Seconds,  24.17  mins,  0.4  hour
+ ......... EPISODE =  4000 ......... Current Time =  20:16:56  ..... ELAPSED TIME =  1484.92  Seconds,  24.75  mins,  0.41  hour
+ ......... EPISODE =  4200 ......... Current Time =  20:17:29  ..... ELAPSED TIME =  1517.13  Seconds,  25.29  mins,  0.42  hour
+ ......... EPISODE =  4400 ......... Current Time =  20:17:59  ..... ELAPSED TIME =  1547.89  Seconds,  25.8  mins,  0.43  hour
+ ......... EPISODE =  4600 ......... Current Time =  20:18:31  ..... ELAPSED TIME =  1579.61  Seconds,  26.33  mins,  0.44  hour
+ ......... EPISODE =  4800 ......... Current Time =  20:18:59  ..... ELAPSED TIME =  1607.4  Seconds,  26.79  mins,  0.45  hour
+ ......... EPISODE =  5000 ......... Current Time =  20:19:27  ..... ELAPSED TIME =  1635.78  Seconds,  27.26  mins,  0.45  hour
+ ......... EPISODE =  5200 ......... Current Time =  20:19:57  ..... ELAPSED TIME =  1665.78  Seconds,  27.76  mins,  0.46  hour
+ ......... EPISODE =  5400 ......... Current Time =  20:20:27  ..... ELAPSED TIME =  1695.53  Seconds,  28.26  mins,  0.47  hour
+ ......... EPISODE =  5600 ......... Current Time =  20:20:53  ..... ELAPSED TIME =  1721.78  Seconds,  28.7  mins,  0.48  hour
+ ......... EPISODE =  5800 ......... Current Time =  20:21:21  ..... ELAPSED TIME =  1749.96  Seconds,  29.17  mins,  0.49  hour
+ ......... EPISODE =  6000 ......... Current Time =  20:21:49  ..... ELAPSED TIME =  1777.68  Seconds,  29.63  mins,  0.49  hour
+ ......... EPISODE =  6200 ......... Current Time =  20:22:17  ..... ELAPSED TIME =  1805.62  Seconds,  30.09  mins,  0.5  hour
+ ......... EPISODE =  6400 ......... Current Time =  20:22:47  ..... ELAPSED TIME =  1835.6  Seconds,  30.59  mins,  0.51  hour
+ ......... EPISODE =  6600 ......... Current Time =  20:23:16  ..... ELAPSED TIME =  1864.35  Seconds,  31.07  mins,  0.52  hour
+ ......... EPISODE =  6800 ......... Current Time =  20:23:43  ..... ELAPSED TIME =  1891.43  Seconds,  31.52  mins,  0.53  hour
+ ......... EPISODE =  7000 ......... Current Time =  20:24:14  ..... ELAPSED TIME =  1922.51  Seconds,  32.04  mins,  0.53  hour
+ ......... EPISODE =  7200 ......... Current Time =  20:24:42  ..... ELAPSED TIME =  1950.22  Seconds,  32.5  mins,  0.54  hour
+ ......... EPISODE =  7400 ......... Current Time =  20:25:11  ..... ELAPSED TIME =  1979.57  Seconds,  32.99  mins,  0.55  hour
+ ......... EPISODE =  7600 ......... Current Time =  20:25:43  ..... ELAPSED TIME =  2012.09  Seconds,  33.53  mins,  0.56  hour
+ ......... EPISODE =  7800 ......... Current Time =  20:26:12  ..... ELAPSED TIME =  2040.56  Seconds,  34.01  mins,  0.57  hour
+ ......... EPISODE =  8000 ......... Current Time =  20:26:41  ..... ELAPSED TIME =  2069.16  Seconds,  34.49  mins,  0.57  hour
+ ......... EPISODE =  8200 ......... Current Time =  20:27:10  ..... ELAPSED TIME =  2098.98  Seconds,  34.98  mins,  0.58  hour
+ ......... EPISODE =  8400 ......... Current Time =  20:27:38  ..... ELAPSED TIME =  2126.24  Seconds,  35.44  mins,  0.59  hour
+ ......... EPISODE =  8600 ......... Current Time =  20:28:08  ..... ELAPSED TIME =  2156.7  Seconds,  35.95  mins,  0.6  hour
+ ......... EPISODE =  8800 ......... Current Time =  20:28:35  ..... ELAPSED TIME =  2183.54  Seconds,  36.39  mins,  0.61  hour
+ ......... EPISODE =  9000 ......... Current Time =  20:29:04  ..... ELAPSED TIME =  2212.35  Seconds,  36.87  mins,  0.61  hour
+ ......... EPISODE =  9200 ......... Current Time =  20:29:33  ..... ELAPSED TIME =  2241.33  Seconds,  37.36  mins,  0.62  hour
+ ......... EPISODE =  9400 ......... Current Time =  20:30:02  ..... ELAPSED TIME =  2270.23  Seconds,  37.84  mins,  0.63  hour
+ ......... EPISODE =  9600 ......... Current Time =  20:30:29  ..... ELAPSED TIME =  2298.1  Seconds,  38.3  mins,  0.64  hour
+ ......... EPISODE =  9800 ......... Current Time =  20:30:57  ..... ELAPSED TIME =  2325.7  Seconds,  38.76  mins,  0.65  hour
+ ......... EPISODE =  10000 ......... Current Time =  20:31:26  ..... ELAPSED TIME =  2354.69  Seconds,  39.24  mins,  0.65  hour
+......... TOTAL RUNs =  1
+
+********** INFO:
+ Episode:  1 
+ Distance:  0 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.0 
+ Throughput:  0.0 
+ Interference on Neighbor UEs:  0.0
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ New Cell: 1 
+ Next State 
+ Action_power:  150.0 
+ Interference on UAV:  6.688022370579558 
+ SINR:  0.06243478190657443 
+ Throughput:  0.5655971758542251 
+ Interference on Neighbor UEs:  3.070545202348981
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ Current Cell: 1 
+ Current State 
+ Interference on UAV:  6.688022370579558 
+ SINR:  0.06243478190657443 
+ Throughput:  0.5655971758542251 
+ Interference on Neighbor UEs:  3.070545202348981
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ New Cell: 2 
+ Next State 
+ Action_power:  150.0 
+ Interference on UAV:  10.339941628823224 
+ SINR:  0.04232826020726271 
+ Throughput:  0.5655971758542251 
+ Interference on Neighbor UEs:  3.8778941705448537
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ Current Cell: 2 
+ Current State 
+ Interference on UAV:  10.339941628823224 
+ SINR:  0.04232826020726271 
+ Throughput:  0.5655971758542251 
+ Interference on Neighbor UEs:  3.8778941705448537
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ New Cell: 8 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  6.350193369449842 
+ SINR:  0.08707253916068111 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.7964707562110895
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ Current Cell: 8 
+ Current State 
+ Interference on UAV:  6.350193369449842 
+ SINR:  0.08707253916068111 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.7964707562110895
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ New Cell: 13 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.274095186736932 
+ SINR:  0.10200674056602176 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.737868225725212
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ Current Cell: 13 
+ Current State 
+ Interference on UAV:  5.274095186736932 
+ SINR:  0.10200674056602176 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.737868225725212
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ New Cell: 19 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  2.9247402265555995 
+ SINR:  0.16306811739274574 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.2392979936263
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ Current Cell: 19 
+ Current State 
+ Interference on UAV:  2.9247402265555995 
+ SINR:  0.16306811739274574 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.2392979936263
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ New Cell: 23 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ Current Cell: 23 
+ Current State 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ New Cell: 23 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ Current Cell: 23 
+ Current State 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  8 
+ New Cell: 23 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+tested_policy_feature_expectation:  [1.60922425 0.         0.56146512 7.22851037 0.79388042]
+
+weights:  [-2.5069148   0.60007411 -4.31095122  0.90472577 -1.36693489] 
+ weights_norm:  [-0.47447418  0.11357373 -0.81591726  0.17123399 -0.25871454] 
+
+...... Learner =  3   Hyper Distance =  0.37853236096734755
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 6               
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer started.
+Quadratic to conic reformulation started.
+Quadratic to conic reformulation terminated. Time: 0.00    
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 6               
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 8               
+Optimizer  - solved problem         : the dual        
+Optimizer  - Constraints            : 5
+Optimizer  - Cones                  : 1
+Optimizer  - Scalar variables       : 11                conic                  : 6               
+Optimizer  - Semi-definite variables: 0                 scalarized             : 0               
+Factor     - setup time             : 0.00              dense det. time        : 0.00            
+Factor     - ML order time          : 0.00              GP order time          : 0.00            
+Factor     - nonzeros before factor : 15                after factor           : 15              
+Factor     - dense dim.             : 0                 flops                  : 2.25e+02        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   1.0e+00  1.0e+00  2.0e+00  0.00e+00   5.000000000e-01   0.000000000e+00   1.0e+00  0.02  
+1   2.9e-01  2.9e-01  1.1e+00  -1.44e+00  8.445521313e+00   1.818012857e+01   2.9e-01  0.02  
+2   1.4e-01  1.4e-01  1.1e-01  7.68e-01   1.861323976e+01   1.550339643e+01   1.4e-01  0.02  
+3   1.6e-02  1.6e-02  3.2e-03  8.10e-01   2.651514987e+01   2.603003255e+01   1.6e-02  0.02  
+4   1.7e-03  1.7e-03  1.2e-04  1.00e+00   2.776681026e+01   2.771482673e+01   1.7e-03  0.02  
+5   4.4e-04  4.4e-04  2.1e-05  9.99e-01   2.788383848e+01   2.787178844e+01   4.4e-04  0.02  
+6   9.6e-05  9.6e-05  3.2e-06  1.00e+00   2.790609669e+01   2.790473556e+01   9.6e-05  0.02  
+7   1.1e-06  1.1e-06  4.0e-09  1.00e+00   2.791596856e+01   2.791595308e+01   1.1e-06  0.02  
+8   1.0e-07  1.0e-07  1.1e-10  1.00e+00   2.791604704e+01   2.791604565e+01   1.0e-07  0.02  
+9   8.3e-09  8.3e-09  2.6e-12  1.00e+00   2.791605218e+01   2.791605207e+01   8.3e-09  0.02  
+Optimizer terminated. Time: 0.02    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 2.7916051655e+01    nrm: 4e+00    Viol.  con: 2e-08    var: 0e+00  
+  Dual.    obj: 2.7916052602e+01    nrm: 2e+01    Viol.  con: 0e+00    var: 5e-04  
+Optimization status is:  optimal
+
+weights:  [-2.50700456  0.60007913 -4.31080822  0.90476316 -1.36719456] 
+ weights_norm:  [-0.47449116  0.11357468 -0.81589018  0.17124106 -0.25876368] 
+
+......... TOTAL EPOCHS =  10002
+ ......... EPISODE =  200 ......... Current Time =  20:33:16  ..... ELAPSED TIME =  109.64  Seconds,  1.83  mins,  0.03  hour
+ ......... EPISODE =  400 ......... Current Time =  20:35:12  ..... ELAPSED TIME =  225.71  Seconds,  3.76  mins,  0.06  hour
+ ......... EPISODE =  600 ......... Current Time =  20:36:51  ..... ELAPSED TIME =  324.83  Seconds,  5.41  mins,  0.09  hour
+ ......... EPISODE =  800 ......... Current Time =  20:38:48  ..... ELAPSED TIME =  442.05  Seconds,  7.37  mins,  0.12  hour
+ ......... EPISODE =  1000 ......... Current Time =  20:40:47  ..... ELAPSED TIME =  560.31  Seconds,  9.34  mins,  0.16  hour
+ ......... EPISODE =  1200 ......... Current Time =  20:42:31  ..... ELAPSED TIME =  664.8  Seconds,  11.08  mins,  0.18  hour
+ ......... EPISODE =  1400 ......... Current Time =  20:44:09  ..... ELAPSED TIME =  762.3  Seconds,  12.7  mins,  0.21  hour
+ ......... EPISODE =  1600 ......... Current Time =  20:45:40  ..... ELAPSED TIME =  853.47  Seconds,  14.22  mins,  0.24  hour
+ ......... EPISODE =  1800 ......... Current Time =  20:46:54  ..... ELAPSED TIME =  928.04  Seconds,  15.47  mins,  0.26  hour
+ ......... EPISODE =  2000 ......... Current Time =  20:48:02  ..... ELAPSED TIME =  996.01  Seconds,  16.6  mins,  0.28  hour
+ ......... EPISODE =  2200 ......... Current Time =  20:49:07  ..... ELAPSED TIME =  1060.82  Seconds,  17.68  mins,  0.29  hour
+ ......... EPISODE =  2400 ......... Current Time =  20:50:01  ..... ELAPSED TIME =  1114.2  Seconds,  18.57  mins,  0.31  hour
+ ......... EPISODE =  2600 ......... Current Time =  20:51:00  ..... ELAPSED TIME =  1173.55  Seconds,  19.56  mins,  0.33  hour
+ ......... EPISODE =  2800 ......... Current Time =  20:51:55  ..... ELAPSED TIME =  1228.92  Seconds,  20.48  mins,  0.34  hour
+ ......... EPISODE =  3000 ......... Current Time =  20:52:44  ..... ELAPSED TIME =  1278.03  Seconds,  21.3  mins,  0.36  hour
+ ......... EPISODE =  3200 ......... Current Time =  20:53:27  ..... ELAPSED TIME =  1320.62  Seconds,  22.01  mins,  0.37  hour
+ ......... EPISODE =  3400 ......... Current Time =  20:54:04  ..... ELAPSED TIME =  1357.7  Seconds,  22.63  mins,  0.38  hour
+ ......... EPISODE =  3600 ......... Current Time =  20:54:40  ..... ELAPSED TIME =  1393.24  Seconds,  23.22  mins,  0.39  hour
+ ......... EPISODE =  3800 ......... Current Time =  20:55:14  ..... ELAPSED TIME =  1427.33  Seconds,  23.79  mins,  0.4  hour
+ ......... EPISODE =  4000 ......... Current Time =  20:55:45  ..... ELAPSED TIME =  1459.17  Seconds,  24.32  mins,  0.41  hour
+ ......... EPISODE =  4200 ......... Current Time =  20:56:16  ..... ELAPSED TIME =  1489.94  Seconds,  24.83  mins,  0.41  hour
+ ......... EPISODE =  4400 ......... Current Time =  20:56:47  ..... ELAPSED TIME =  1520.51  Seconds,  25.34  mins,  0.42  hour
+ ......... EPISODE =  4600 ......... Current Time =  20:57:16  ..... ELAPSED TIME =  1549.63  Seconds,  25.83  mins,  0.43  hour
+ ......... EPISODE =  4800 ......... Current Time =  20:57:47  ..... ELAPSED TIME =  1580.78  Seconds,  26.35  mins,  0.44  hour
+ ......... EPISODE =  5000 ......... Current Time =  20:58:18  ..... ELAPSED TIME =  1611.41  Seconds,  26.86  mins,  0.45  hour
+ ......... EPISODE =  5200 ......... Current Time =  20:58:48  ..... ELAPSED TIME =  1641.92  Seconds,  27.37  mins,  0.46  hour
+ ......... EPISODE =  5400 ......... Current Time =  20:59:20  ..... ELAPSED TIME =  1673.96  Seconds,  27.9  mins,  0.46  hour
+ ......... EPISODE =  5600 ......... Current Time =  20:59:51  ..... ELAPSED TIME =  1704.92  Seconds,  28.42  mins,  0.47  hour
+ ......... EPISODE =  5800 ......... Current Time =  21:00:21  ..... ELAPSED TIME =  1735.17  Seconds,  28.92  mins,  0.48  hour
+ ......... EPISODE =  6000 ......... Current Time =  21:00:47  ..... ELAPSED TIME =  1761.04  Seconds,  29.35  mins,  0.49  hour
+ ......... EPISODE =  6200 ......... Current Time =  21:01:15  ..... ELAPSED TIME =  1788.78  Seconds,  29.81  mins,  0.5  hour
+ ......... EPISODE =  6400 ......... Current Time =  21:01:42  ..... ELAPSED TIME =  1815.66  Seconds,  30.26  mins,  0.5  hour
+ ......... EPISODE =  6600 ......... Current Time =  21:02:09  ..... ELAPSED TIME =  1842.6  Seconds,  30.71  mins,  0.51  hour
+ ......... EPISODE =  6800 ......... Current Time =  21:02:35  ..... ELAPSED TIME =  1869.01  Seconds,  31.15  mins,  0.52  hour
+ ......... EPISODE =  7000 ......... Current Time =  21:03:02  ..... ELAPSED TIME =  1895.94  Seconds,  31.6  mins,  0.53  hour
+ ......... EPISODE =  7200 ......... Current Time =  21:03:30  ..... ELAPSED TIME =  1924.1  Seconds,  32.07  mins,  0.53  hour
+ ......... EPISODE =  7400 ......... Current Time =  21:03:57  ..... ELAPSED TIME =  1950.42  Seconds,  32.51  mins,  0.54  hour
+ ......... EPISODE =  7600 ......... Current Time =  21:04:25  ..... ELAPSED TIME =  1978.62  Seconds,  32.98  mins,  0.55  hour
+ ......... EPISODE =  7800 ......... Current Time =  21:04:52  ..... ELAPSED TIME =  2005.7  Seconds,  33.43  mins,  0.56  hour
+ ......... EPISODE =  8000 ......... Current Time =  21:05:22  ..... ELAPSED TIME =  2036.03  Seconds,  33.93  mins,  0.57  hour
+ ......... EPISODE =  8200 ......... Current Time =  21:05:49  ..... ELAPSED TIME =  2062.54  Seconds,  34.38  mins,  0.57  hour
+ ......... EPISODE =  8400 ......... Current Time =  21:06:16  ..... ELAPSED TIME =  2089.38  Seconds,  34.82  mins,  0.58  hour
+ ......... EPISODE =  8600 ......... Current Time =  21:06:43  ..... ELAPSED TIME =  2116.37  Seconds,  35.27  mins,  0.59  hour
+ ......... EPISODE =  8800 ......... Current Time =  21:07:10  ..... ELAPSED TIME =  2143.92  Seconds,  35.73  mins,  0.6  hour
+ ......... EPISODE =  9000 ......... Current Time =  21:07:36  ..... ELAPSED TIME =  2169.52  Seconds,  36.16  mins,  0.6  hour
+ ......... EPISODE =  9200 ......... Current Time =  21:08:03  ..... ELAPSED TIME =  2196.54  Seconds,  36.61  mins,  0.61  hour
+ ......... EPISODE =  9400 ......... Current Time =  21:08:33  ..... ELAPSED TIME =  2226.75  Seconds,  37.11  mins,  0.62  hour
+ ......... EPISODE =  9600 ......... Current Time =  21:09:02  ..... ELAPSED TIME =  2255.58  Seconds,  37.59  mins,  0.63  hour
+ ......... EPISODE =  9800 ......... Current Time =  21:09:30  ..... ELAPSED TIME =  2283.51  Seconds,  38.06  mins,  0.63  hour
+ ......... EPISODE =  10000 ......... Current Time =  21:09:59  ..... ELAPSED TIME =  2313.16  Seconds,  38.55  mins,  0.64  hour
+......... TOTAL RUNs =  1
+
+********** INFO:
+ Episode:  1 
+ Distance:  0 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.0 
+ Throughput:  0.0 
+ Interference on Neighbor UEs:  0.0
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ New Cell: 1 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  6.688022370579558 
+ SINR:  0.08324637587543256 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.094060269798641
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ Current Cell: 1 
+ Current State 
+ Interference on UAV:  6.688022370579558 
+ SINR:  0.08324637587543256 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.094060269798641
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ New Cell: 2 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  10.339941628823224 
+ SINR:  0.05643768027635029 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  5.170525560726471
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ Current Cell: 2 
+ Current State 
+ Interference on UAV:  10.339941628823224 
+ SINR:  0.05643768027635029 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  5.170525560726471
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ New Cell: 8 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  6.350193369449842 
+ SINR:  0.08707253916068111 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.7964707562110895
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ Current Cell: 8 
+ Current State 
+ Interference on UAV:  6.350193369449842 
+ SINR:  0.08707253916068111 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.7964707562110895
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ New Cell: 13 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.274095186736932 
+ SINR:  0.10200674056602176 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.737868225725212
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ Current Cell: 13 
+ Current State 
+ Interference on UAV:  5.274095186736932 
+ SINR:  0.10200674056602176 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.737868225725212
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ New Cell: 14 
+ Next State 
+ Action_power:  150.0 
+ Interference on UAV:  7.371953311489795 
+ SINR:  0.057334290116171666 
+ Throughput:  0.5655971758542251 
+ Interference on Neighbor UEs:  2.348692625176322
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ Current Cell: 14 
+ Current State 
+ Interference on UAV:  7.371953311489795 
+ SINR:  0.057334290116171666 
+ Throughput:  0.5655971758542251 
+ Interference on Neighbor UEs:  2.348692625176322
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ New Cell: 19 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  2.9247402265555995 
+ SINR:  0.16306811739274574 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.2392979936263
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ Current Cell: 19 
+ Current State 
+ Interference on UAV:  2.9247402265555995 
+ SINR:  0.16306811739274574 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.2392979936263
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ New Cell: 23 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ Current Cell: 23 
+ Current State 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  8 
+ New Cell: 23 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+tested_policy_feature_expectation:  [1.69222475 0.         0.52799932 7.60158278 0.81336877]
+
+weights:  [-2.50700456  0.60007913 -4.31080822  0.90476316 -1.36719456] 
+ weights_norm:  [-0.47449116  0.11357468 -0.81589018  0.17124106 -0.25876368] 
+
+...... Learner =  4   Hyper Distance =  0.33176850191358415
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 7               
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer started.
+Quadratic to conic reformulation started.
+Quadratic to conic reformulation terminated. Time: 0.00    
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 7               
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 8               
+Optimizer  - solved problem         : the dual        
+Optimizer  - Constraints            : 5
+Optimizer  - Cones                  : 1
+Optimizer  - Scalar variables       : 12                conic                  : 6               
+Optimizer  - Semi-definite variables: 0                 scalarized             : 0               
+Factor     - setup time             : 0.00              dense det. time        : 0.00            
+Factor     - ML order time          : 0.00              GP order time          : 0.00            
+Factor     - nonzeros before factor : 15                after factor           : 15              
+Factor     - dense dim.             : 0                 flops                  : 2.45e+02        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   1.0e+00  1.0e+00  2.0e+00  0.00e+00   5.000000000e-01   0.000000000e+00   1.0e+00  0.03  
+1   2.9e-01  2.9e-01  1.2e+00  -1.44e+00  8.620529630e+00   1.853964863e+01   2.9e-01  0.03  
+2   1.5e-01  1.5e-01  1.1e-01  7.81e-01   1.920135852e+01   1.586497881e+01   1.5e-01  0.03  
+3   2.0e-02  2.0e-02  3.8e-03  8.68e-01   2.762585272e+01   2.703317091e+01   2.0e-02  0.03  
+4   4.0e-03  4.0e-03  6.5e-04  1.02e+00   2.959950717e+01   2.950795190e+01   4.0e-03  0.03  
+5   4.7e-04  4.7e-04  2.7e-05  9.82e-01   3.022904180e+01   3.021873877e+01   4.7e-04  0.03  
+6   6.8e-05  6.8e-05  1.6e-06  9.99e-01   3.028944370e+01   3.028806936e+01   6.8e-05  0.03  
+7   3.5e-06  3.5e-06  1.9e-08  1.00e+00   3.029835109e+01   3.029828531e+01   3.5e-06  0.03  
+8   2.6e-08  2.6e-08  1.3e-11  1.00e+00   3.029883276e+01   3.029883227e+01   2.6e-08  0.03  
+9   3.2e-10  1.5e-11  1.3e-16  1.00e+00   3.029883638e+01   3.029883638e+01   1.3e-11  0.03  
+Optimizer terminated. Time: 0.03    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 3.0298836377e+01    nrm: 5e+00    Viol.  con: 3e-11    var: 0e+00  
+  Dual.    obj: 3.0298836372e+01    nrm: 3e+01    Viol.  con: 0e+00    var: 5e-06  
+Optimization status is:  optimal
+
+weights:  [-2.53148571  0.6273648  -4.5089143   0.90887466 -1.52985901] 
+ weights_norm:  [-0.45989904  0.11397436 -0.81914164  0.16511671 -0.27793192] 
+
+......... TOTAL EPOCHS =  10002
+ ......... EPISODE =  200 ......... Current Time =  21:11:50  ..... ELAPSED TIME =  109.88  Seconds,  1.83  mins,  0.03  hour
+ ......... EPISODE =  400 ......... Current Time =  21:13:52  ..... ELAPSED TIME =  231.73  Seconds,  3.86  mins,  0.06  hour
+ ......... EPISODE =  600 ......... Current Time =  21:15:55  ..... ELAPSED TIME =  355.04  Seconds,  5.92  mins,  0.1  hour
+ ......... EPISODE =  800 ......... Current Time =  21:18:03  ..... ELAPSED TIME =  483.38  Seconds,  8.06  mins,  0.13  hour
+ ......... EPISODE =  1000 ......... Current Time =  21:19:54  ..... ELAPSED TIME =  594.02  Seconds,  9.9  mins,  0.17  hour
+ ......... EPISODE =  1200 ......... Current Time =  21:21:32  ..... ELAPSED TIME =  691.92  Seconds,  11.53  mins,  0.19  hour
+ ......... EPISODE =  1400 ......... Current Time =  21:23:10  ..... ELAPSED TIME =  789.66  Seconds,  13.16  mins,  0.22  hour
+ ......... EPISODE =  1600 ......... Current Time =  21:24:36  ..... ELAPSED TIME =  876.01  Seconds,  14.6  mins,  0.24  hour
+ ......... EPISODE =  1800 ......... Current Time =  21:25:50  ..... ELAPSED TIME =  950.08  Seconds,  15.83  mins,  0.26  hour
+ ......... EPISODE =  2000 ......... Current Time =  21:27:02  ..... ELAPSED TIME =  1022.41  Seconds,  17.04  mins,  0.28  hour
+ ......... EPISODE =  2200 ......... Current Time =  21:28:07  ..... ELAPSED TIME =  1086.65  Seconds,  18.11  mins,  0.3  hour
+ ......... EPISODE =  2400 ......... Current Time =  21:29:06  ..... ELAPSED TIME =  1146.4  Seconds,  19.11  mins,  0.32  hour
+ ......... EPISODE =  2600 ......... Current Time =  21:30:02  ..... ELAPSED TIME =  1201.89  Seconds,  20.03  mins,  0.33  hour
+ ......... EPISODE =  2800 ......... Current Time =  21:30:44  ..... ELAPSED TIME =  1244.42  Seconds,  20.74  mins,  0.35  hour
+ ......... EPISODE =  3000 ......... Current Time =  21:31:27  ..... ELAPSED TIME =  1287.31  Seconds,  21.46  mins,  0.36  hour
+ ......... EPISODE =  3200 ......... Current Time =  21:32:05  ..... ELAPSED TIME =  1324.73  Seconds,  22.08  mins,  0.37  hour
+ ......... EPISODE =  3400 ......... Current Time =  21:32:45  ..... ELAPSED TIME =  1364.9  Seconds,  22.75  mins,  0.38  hour
+ ......... EPISODE =  3600 ......... Current Time =  21:33:18  ..... ELAPSED TIME =  1398.54  Seconds,  23.31  mins,  0.39  hour
+ ......... EPISODE =  3800 ......... Current Time =  21:33:50  ..... ELAPSED TIME =  1430.1  Seconds,  23.83  mins,  0.4  hour
+ ......... EPISODE =  4000 ......... Current Time =  21:34:20  ..... ELAPSED TIME =  1460.49  Seconds,  24.34  mins,  0.41  hour
+ ......... EPISODE =  4200 ......... Current Time =  21:34:49  ..... ELAPSED TIME =  1488.8  Seconds,  24.81  mins,  0.41  hour
+ ......... EPISODE =  4400 ......... Current Time =  21:35:20  ..... ELAPSED TIME =  1519.89  Seconds,  25.33  mins,  0.42  hour
+ ......... EPISODE =  4600 ......... Current Time =  21:35:50  ..... ELAPSED TIME =  1550.52  Seconds,  25.84  mins,  0.43  hour
+ ......... EPISODE =  4800 ......... Current Time =  21:36:20  ..... ELAPSED TIME =  1580.19  Seconds,  26.34  mins,  0.44  hour
+ ......... EPISODE =  5000 ......... Current Time =  21:36:51  ..... ELAPSED TIME =  1611.6  Seconds,  26.86  mins,  0.45  hour
+ ......... EPISODE =  5200 ......... Current Time =  21:37:21  ..... ELAPSED TIME =  1641.33  Seconds,  27.36  mins,  0.46  hour
+ ......... EPISODE =  5400 ......... Current Time =  21:37:54  ..... ELAPSED TIME =  1673.85  Seconds,  27.9  mins,  0.46  hour
+ ......... EPISODE =  5600 ......... Current Time =  21:38:26  ..... ELAPSED TIME =  1705.76  Seconds,  28.43  mins,  0.47  hour
+ ......... EPISODE =  5800 ......... Current Time =  21:38:56  ..... ELAPSED TIME =  1736.14  Seconds,  28.94  mins,  0.48  hour
+ ......... EPISODE =  6000 ......... Current Time =  21:39:28  ..... ELAPSED TIME =  1767.68  Seconds,  29.46  mins,  0.49  hour
+ ......... EPISODE =  6200 ......... Current Time =  21:40:01  ..... ELAPSED TIME =  1800.78  Seconds,  30.01  mins,  0.5  hour
+ ......... EPISODE =  6400 ......... Current Time =  21:40:35  ..... ELAPSED TIME =  1835.26  Seconds,  30.59  mins,  0.51  hour
+ ......... EPISODE =  6600 ......... Current Time =  21:41:04  ..... ELAPSED TIME =  1864.55  Seconds,  31.08  mins,  0.52  hour
+ ......... EPISODE =  6800 ......... Current Time =  21:41:31  ..... ELAPSED TIME =  1891.64  Seconds,  31.53  mins,  0.53  hour
+ ......... EPISODE =  7000 ......... Current Time =  21:41:57  ..... ELAPSED TIME =  1917.26  Seconds,  31.95  mins,  0.53  hour
+ ......... EPISODE =  7200 ......... Current Time =  21:42:26  ..... ELAPSED TIME =  1945.78  Seconds,  32.43  mins,  0.54  hour
+ ......... EPISODE =  7400 ......... Current Time =  21:42:55  ..... ELAPSED TIME =  1975.34  Seconds,  32.92  mins,  0.55  hour
+ ......... EPISODE =  7600 ......... Current Time =  21:43:21  ..... ELAPSED TIME =  2001.04  Seconds,  33.35  mins,  0.56  hour
+ ......... EPISODE =  7800 ......... Current Time =  21:43:49  ..... ELAPSED TIME =  2028.8  Seconds,  33.81  mins,  0.56  hour
+ ......... EPISODE =  8000 ......... Current Time =  21:44:14  ..... ELAPSED TIME =  2054.53  Seconds,  34.24  mins,  0.57  hour
+ ......... EPISODE =  8200 ......... Current Time =  21:44:41  ..... ELAPSED TIME =  2080.98  Seconds,  34.68  mins,  0.58  hour
+ ......... EPISODE =  8400 ......... Current Time =  21:45:08  ..... ELAPSED TIME =  2107.85  Seconds,  35.13  mins,  0.59  hour
+ ......... EPISODE =  8600 ......... Current Time =  21:45:35  ..... ELAPSED TIME =  2135.01  Seconds,  35.58  mins,  0.59  hour
+ ......... EPISODE =  8800 ......... Current Time =  21:46:04  ..... ELAPSED TIME =  2164.49  Seconds,  36.07  mins,  0.6  hour
+ ......... EPISODE =  9000 ......... Current Time =  21:46:32  ..... ELAPSED TIME =  2192.56  Seconds,  36.54  mins,  0.61  hour
+ ......... EPISODE =  9200 ......... Current Time =  21:46:59  ..... ELAPSED TIME =  2219.14  Seconds,  36.99  mins,  0.62  hour
+ ......... EPISODE =  9400 ......... Current Time =  21:47:28  ..... ELAPSED TIME =  2248.33  Seconds,  37.47  mins,  0.62  hour
+ ......... EPISODE =  9600 ......... Current Time =  21:47:56  ..... ELAPSED TIME =  2276.27  Seconds,  37.94  mins,  0.63  hour
+ ......... EPISODE =  9800 ......... Current Time =  21:48:25  ..... ELAPSED TIME =  2305.39  Seconds,  38.42  mins,  0.64  hour
+ ......... EPISODE =  10000 ......... Current Time =  21:48:56  ..... ELAPSED TIME =  2335.8  Seconds,  38.93  mins,  0.65  hour
+......... TOTAL RUNs =  1
+
+********** INFO:
+ Episode:  1 
+ Distance:  0 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.0 
+ Throughput:  0.0 
+ Interference on Neighbor UEs:  0.0
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ New Cell: 1 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  6.688022370579558 
+ SINR:  0.08324637587543256 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.094060269798641
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ Current Cell: 1 
+ Current State 
+ Interference on UAV:  6.688022370579558 
+ SINR:  0.08324637587543256 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.094060269798641
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ New Cell: 2 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  10.339941628823224 
+ SINR:  0.05643768027635029 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  5.170525560726471
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ Current Cell: 2 
+ Current State 
+ Interference on UAV:  10.339941628823224 
+ SINR:  0.05643768027635029 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  5.170525560726471
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ New Cell: 8 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  6.350193369449842 
+ SINR:  0.08707253916068111 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.7964707562110895
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ Current Cell: 8 
+ Current State 
+ Interference on UAV:  6.350193369449842 
+ SINR:  0.08707253916068111 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.7964707562110895
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ New Cell: 13 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.274095186736932 
+ SINR:  0.10200674056602176 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.737868225725212
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ Current Cell: 13 
+ Current State 
+ Interference on UAV:  5.274095186736932 
+ SINR:  0.10200674056602176 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.737868225725212
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ New Cell: 19 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  2.9247402265555995 
+ SINR:  0.16306811739274574 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.2392979936263
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ Current Cell: 19 
+ Current State 
+ Interference on UAV:  2.9247402265555995 
+ SINR:  0.16306811739274574 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.2392979936263
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ New Cell: 23 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ Current Cell: 23 
+ Current State 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ New Cell: 23 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ Current Cell: 23 
+ Current State 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  8 
+ New Cell: 23 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+tested_policy_feature_expectation:  [1.60922425 0.         0.56146512 7.97205593 0.87750037]
+
+weights:  [-2.53148571  0.6273648  -4.5089143   0.90887466 -1.52985901] 
+ weights_norm:  [-0.45989904  0.11397436 -0.81914164  0.16511671 -0.27793192] 
+
+...... Learner =  5   Hyper Distance =  0.30923747765876247
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 8               
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer started.
+Quadratic to conic reformulation started.
+Quadratic to conic reformulation terminated. Time: 0.00    
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 8               
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 8               
+Optimizer  - solved problem         : the dual        
+Optimizer  - Constraints            : 5
+Optimizer  - Cones                  : 1
+Optimizer  - Scalar variables       : 13                conic                  : 6               
+Optimizer  - Semi-definite variables: 0                 scalarized             : 0               
+Factor     - setup time             : 0.00              dense det. time        : 0.00            
+Factor     - ML order time          : 0.00              GP order time          : 0.00            
+Factor     - nonzeros before factor : 15                after factor           : 15              
+Factor     - dense dim.             : 0                 flops                  : 2.65e+02        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   1.0e+00  1.0e+00  2.0e+00  0.00e+00   5.000000000e-01   0.000000000e+00   1.0e+00  0.02  
+1   2.9e-01  2.9e-01  1.2e+00  -1.45e+00  8.834670567e+00   1.907498272e+01   2.9e-01  0.02  
+2   1.5e-01  1.5e-01  1.1e-01  7.70e-01   2.006645427e+01   1.655146543e+01   1.5e-01  0.02  
+3   2.4e-02  2.4e-02  4.8e-03  9.09e-01   2.921915832e+01   2.850621661e+01   2.4e-02  0.02  
+4   5.5e-03  5.5e-03  1.1e-03  1.03e+00   3.221010274e+01   3.209901063e+01   5.5e-03  0.02  
+5   1.3e-03  1.3e-03  1.6e-04  1.02e+00   3.258711122e+01   3.257069006e+01   1.3e-03  0.02  
+6   2.0e-04  2.0e-04  1.1e-05  1.01e+00   3.272410901e+01   3.272250855e+01   2.0e-04  0.02  
+7   1.7e-06  1.7e-06  8.1e-09  9.99e-01   3.275325777e+01   3.275324541e+01   1.7e-06  0.02  
+8   1.3e-07  1.3e-07  1.8e-10  1.00e+00   3.275339190e+01   3.275339118e+01   1.3e-07  0.02  
+9   2.8e-09  2.8e-09  5.6e-13  1.00e+00   3.275340318e+01   3.275340316e+01   2.8e-09  0.02  
+Optimizer terminated. Time: 0.02    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 3.2753402985e+01    nrm: 5e+00    Viol.  con: 6e-09    var: 0e+00  
+  Dual.    obj: 3.2753403357e+01    nrm: 3e+01    Viol.  con: 0e+00    var: 1e-04  
+Optimization status is:  optimal
+
+weights:  [-1.96851368  0.53954616 -4.96532604  0.82035994 -1.80548987] 
+ weights_norm:  [-0.34396181  0.09427584 -0.86760003  0.14334291 -0.31547637] 
+
+......... TOTAL EPOCHS =  10002
+ ......... EPISODE =  200 ......... Current Time =  21:50:47  ..... ELAPSED TIME =  111.36  Seconds,  1.86  mins,  0.03  hour
+ ......... EPISODE =  400 ......... Current Time =  21:52:48  ..... ELAPSED TIME =  231.8  Seconds,  3.86  mins,  0.06  hour
+ ......... EPISODE =  600 ......... Current Time =  21:54:38  ..... ELAPSED TIME =  342.02  Seconds,  5.7  mins,  0.1  hour
+ ......... EPISODE =  800 ......... Current Time =  21:56:37  ..... ELAPSED TIME =  460.54  Seconds,  7.68  mins,  0.13  hour
+ ......... EPISODE =  1000 ......... Current Time =  21:58:46  ..... ELAPSED TIME =  590.27  Seconds,  9.84  mins,  0.16  hour
+ ......... EPISODE =  1200 ......... Current Time =  22:00:38  ..... ELAPSED TIME =  701.74  Seconds,  11.7  mins,  0.19  hour
+ ......... EPISODE =  1400 ......... Current Time =  22:02:09  ..... ELAPSED TIME =  792.85  Seconds,  13.21  mins,  0.22  hour
+ ......... EPISODE =  1600 ......... Current Time =  22:03:24  ..... ELAPSED TIME =  867.97  Seconds,  14.47  mins,  0.24  hour
+ ......... EPISODE =  1800 ......... Current Time =  22:04:44  ..... ELAPSED TIME =  947.65  Seconds,  15.79  mins,  0.26  hour
+ ......... EPISODE =  2000 ......... Current Time =  22:05:50  ..... ELAPSED TIME =  1014.34  Seconds,  16.91  mins,  0.28  hour
+ ......... EPISODE =  2200 ......... Current Time =  22:06:53  ..... ELAPSED TIME =  1077.24  Seconds,  17.95  mins,  0.3  hour
+ ......... EPISODE =  2400 ......... Current Time =  22:08:02  ..... ELAPSED TIME =  1145.53  Seconds,  19.09  mins,  0.32  hour
+ ......... EPISODE =  2600 ......... Current Time =  22:08:59  ..... ELAPSED TIME =  1203.27  Seconds,  20.05  mins,  0.33  hour
+ ......... EPISODE =  2800 ......... Current Time =  22:09:54  ..... ELAPSED TIME =  1257.61  Seconds,  20.96  mins,  0.35  hour
+ ......... EPISODE =  3000 ......... Current Time =  22:10:48  ..... ELAPSED TIME =  1311.91  Seconds,  21.87  mins,  0.36  hour
+ ......... EPISODE =  3200 ......... Current Time =  22:11:35  ..... ELAPSED TIME =  1358.54  Seconds,  22.64  mins,  0.38  hour
+ ......... EPISODE =  3400 ......... Current Time =  22:12:19  ..... ELAPSED TIME =  1402.93  Seconds,  23.38  mins,  0.39  hour
+ ......... EPISODE =  3600 ......... Current Time =  22:13:02  ..... ELAPSED TIME =  1445.94  Seconds,  24.1  mins,  0.4  hour
+ ......... EPISODE =  3800 ......... Current Time =  22:13:39  ..... ELAPSED TIME =  1482.64  Seconds,  24.71  mins,  0.41  hour
+ ......... EPISODE =  4000 ......... Current Time =  22:14:17  ..... ELAPSED TIME =  1520.9  Seconds,  25.35  mins,  0.42  hour
+ ......... EPISODE =  4200 ......... Current Time =  22:14:53  ..... ELAPSED TIME =  1557.05  Seconds,  25.95  mins,  0.43  hour
+ ......... EPISODE =  4400 ......... Current Time =  22:15:27  ..... ELAPSED TIME =  1591.25  Seconds,  26.52  mins,  0.44  hour
+ ......... EPISODE =  4600 ......... Current Time =  22:15:59  ..... ELAPSED TIME =  1623.13  Seconds,  27.05  mins,  0.45  hour
+ ......... EPISODE =  4800 ......... Current Time =  22:16:35  ..... ELAPSED TIME =  1658.87  Seconds,  27.65  mins,  0.46  hour
+ ......... EPISODE =  5000 ......... Current Time =  22:17:14  ..... ELAPSED TIME =  1698.2  Seconds,  28.3  mins,  0.47  hour
+ ......... EPISODE =  5200 ......... Current Time =  22:17:45  ..... ELAPSED TIME =  1729.16  Seconds,  28.82  mins,  0.48  hour
+ ......... EPISODE =  5400 ......... Current Time =  22:18:14  ..... ELAPSED TIME =  1758.11  Seconds,  29.3  mins,  0.49  hour
+ ......... EPISODE =  5600 ......... Current Time =  22:18:40  ..... ELAPSED TIME =  1784.27  Seconds,  29.74  mins,  0.5  hour
+ ......... EPISODE =  5800 ......... Current Time =  22:19:09  ..... ELAPSED TIME =  1812.98  Seconds,  30.22  mins,  0.5  hour
+ ......... EPISODE =  6000 ......... Current Time =  22:19:39  ..... ELAPSED TIME =  1842.94  Seconds,  30.72  mins,  0.51  hour
+ ......... EPISODE =  6200 ......... Current Time =  22:20:07  ..... ELAPSED TIME =  1871.08  Seconds,  31.18  mins,  0.52  hour
+ ......... EPISODE =  6400 ......... Current Time =  22:20:33  ..... ELAPSED TIME =  1897.48  Seconds,  31.62  mins,  0.53  hour
+ ......... EPISODE =  6600 ......... Current Time =  22:21:01  ..... ELAPSED TIME =  1925.29  Seconds,  32.09  mins,  0.53  hour
+ ......... EPISODE =  6800 ......... Current Time =  22:21:29  ..... ELAPSED TIME =  1952.77  Seconds,  32.55  mins,  0.54  hour
+ ......... EPISODE =  7000 ......... Current Time =  22:21:57  ..... ELAPSED TIME =  1980.62  Seconds,  33.01  mins,  0.55  hour
+ ......... EPISODE =  7200 ......... Current Time =  22:22:25  ..... ELAPSED TIME =  2008.79  Seconds,  33.48  mins,  0.56  hour
+ ......... EPISODE =  7400 ......... Current Time =  22:22:55  ..... ELAPSED TIME =  2039.03  Seconds,  33.98  mins,  0.57  hour
+ ......... EPISODE =  7600 ......... Current Time =  22:23:25  ..... ELAPSED TIME =  2069.45  Seconds,  34.49  mins,  0.57  hour
+ ......... EPISODE =  7800 ......... Current Time =  22:23:54  ..... ELAPSED TIME =  2098.24  Seconds,  34.97  mins,  0.58  hour
+ ......... EPISODE =  8000 ......... Current Time =  22:24:24  ..... ELAPSED TIME =  2127.71  Seconds,  35.46  mins,  0.59  hour
+ ......... EPISODE =  8200 ......... Current Time =  22:24:52  ..... ELAPSED TIME =  2155.63  Seconds,  35.93  mins,  0.6  hour
+ ......... EPISODE =  8400 ......... Current Time =  22:25:20  ..... ELAPSED TIME =  2183.9  Seconds,  36.4  mins,  0.61  hour
+ ......... EPISODE =  8600 ......... Current Time =  22:25:49  ..... ELAPSED TIME =  2212.96  Seconds,  36.88  mins,  0.61  hour
+ ......... EPISODE =  8800 ......... Current Time =  22:26:18  ..... ELAPSED TIME =  2241.54  Seconds,  37.36  mins,  0.62  hour
+ ......... EPISODE =  9000 ......... Current Time =  22:26:47  ..... ELAPSED TIME =  2270.65  Seconds,  37.84  mins,  0.63  hour
+ ......... EPISODE =  9200 ......... Current Time =  22:27:13  ..... ELAPSED TIME =  2297.46  Seconds,  38.29  mins,  0.64  hour
+ ......... EPISODE =  9400 ......... Current Time =  22:27:42  ..... ELAPSED TIME =  2326.39  Seconds,  38.77  mins,  0.65  hour
+ ......... EPISODE =  9600 ......... Current Time =  22:28:08  ..... ELAPSED TIME =  2352.48  Seconds,  39.21  mins,  0.65  hour
+ ......... EPISODE =  9800 ......... Current Time =  22:28:39  ..... ELAPSED TIME =  2382.54  Seconds,  39.71  mins,  0.66  hour
+ ......... EPISODE =  10000 ......... Current Time =  22:29:07  ..... ELAPSED TIME =  2410.68  Seconds,  40.18  mins,  0.67  hour
+......... TOTAL RUNs =  1
+
+********** INFO:
+ Episode:  1 
+ Distance:  0 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.0 
+ Throughput:  0.0 
+ Interference on Neighbor UEs:  0.0
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ New Cell: 1 
+ Next State 
+ Action_power:  80.0 
+ Interference on UAV:  6.688022370579558 
+ SINR:  0.033298550350173026 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.6376241079194562
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ Current Cell: 1 
+ Current State 
+ Interference on UAV:  6.688022370579558 
+ SINR:  0.033298550350173026 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.6376241079194562
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ New Cell: 2 
+ Next State 
+ Action_power:  80.0 
+ Interference on UAV:  10.339941628823224 
+ SINR:  0.022575072110540113 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  2.068210224290589
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ Current Cell: 2 
+ Current State 
+ Interference on UAV:  10.339941628823224 
+ SINR:  0.022575072110540113 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  2.068210224290589
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ New Cell: 8 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  6.350193369449842 
+ SINR:  0.08707253916068111 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.7964707562110895
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ Current Cell: 8 
+ Current State 
+ Interference on UAV:  6.350193369449842 
+ SINR:  0.08707253916068111 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.7964707562110895
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ New Cell: 9 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  8.7840341991448 
+ SINR:  0.06541269040698375 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.089278351347072
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ Current Cell: 9 
+ Current State 
+ Interference on UAV:  8.7840341991448 
+ SINR:  0.06541269040698375 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.089278351347072
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ New Cell: 14 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  7.371953311489795 
+ SINR:  0.07644572015489555 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  3.1315901669017636
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ Current Cell: 14 
+ Current State 
+ Interference on UAV:  7.371953311489795 
+ SINR:  0.07644572015489555 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  3.1315901669017636
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ New Cell: 19 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  2.9247402265555995 
+ SINR:  0.16306811739274574 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.2392979936263
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ Current Cell: 19 
+ Current State 
+ Interference on UAV:  2.9247402265555995 
+ SINR:  0.16306811739274574 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.2392979936263
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ New Cell: 23 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ Current Cell: 23 
+ Current State 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  8 
+ New Cell: 23 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+tested_policy_feature_expectation:  [1.83069739 0.         0.47057194 6.39742765 0.6376518 ]
+
+weights:  [-1.96851368  0.53954616 -4.96532604  0.82035994 -1.80548987] 
+ weights_norm:  [-0.34396181  0.09427584 -0.86760003  0.14334291 -0.31547637] 
+
+...... Learner =  6   Hyper Distance =  0.49682809809649375
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 9               
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer started.
+Quadratic to conic reformulation started.
+Quadratic to conic reformulation terminated. Time: 0.00    
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 9               
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 8               
+Optimizer  - solved problem         : the dual        
+Optimizer  - Constraints            : 5
+Optimizer  - Cones                  : 1
+Optimizer  - Scalar variables       : 14                conic                  : 6               
+Optimizer  - Semi-definite variables: 0                 scalarized             : 0               
+Factor     - setup time             : 0.00              dense det. time        : 0.00            
+Factor     - ML order time          : 0.00              GP order time          : 0.00            
+Factor     - nonzeros before factor : 15                after factor           : 15              
+Factor     - dense dim.             : 0                 flops                  : 2.85e+02        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   1.0e+00  1.0e+00  2.0e+00  0.00e+00   5.000000000e-01   0.000000000e+00   1.0e+00  0.02  
+1   2.9e-01  2.9e-01  1.2e+00  -1.45e+00  8.772087615e+00   1.889876975e+01   2.9e-01  0.02  
+2   1.5e-01  1.5e-01  1.1e-01  7.78e-01   2.006276969e+01   1.658708877e+01   1.5e-01  0.02  
+3   2.6e-02  2.6e-02  5.2e-03  9.62e-01   2.890339325e+01   2.817083148e+01   2.6e-02  0.02  
+4   7.1e-03  7.1e-03  1.5e-03  1.03e+00   3.216634803e+01   3.202374131e+01   7.1e-03  0.02  
+5   1.6e-03  1.6e-03  2.2e-04  1.04e+00   3.254260507e+01   3.252567776e+01   1.6e-03  0.02  
+6   9.4e-05  9.4e-05  3.2e-06  1.01e+00   3.274022006e+01   3.273945886e+01   9.4e-05  0.02  
+7   4.7e-08  4.7e-08  3.6e-11  1.00e+00   3.275339742e+01   3.275339709e+01   4.7e-08  0.02  
+8   2.1e-09  2.1e-09  3.4e-13  1.00e+00   3.275340320e+01   3.275340319e+01   2.1e-09  0.02  
+Optimizer terminated. Time: 0.02    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 3.2753403165e+01    nrm: 5e+00    Viol.  con: 4e-09    var: 0e+00  
+  Dual.    obj: 3.2753403229e+01    nrm: 3e+01    Viol.  con: 0e+00    var: 4e-04  
+Optimization status is:  optimal
+
+weights:  [-1.96837634  0.53951895 -4.96538319  0.82033745 -1.80550083] 
+ weights_norm:  [-0.34393781  0.09427108 -0.86761001  0.14333898 -0.31547829] 
+
+......... TOTAL EPOCHS =  10002
+ ......... EPISODE =  200 ......... Current Time =  22:31:20  ..... ELAPSED TIME =  133.0  Seconds,  2.22  mins,  0.04  hour
+ ......... EPISODE =  400 ......... Current Time =  22:33:18  ..... ELAPSED TIME =  251.01  Seconds,  4.18  mins,  0.07  hour
+ ......... EPISODE =  600 ......... Current Time =  22:35:01  ..... ELAPSED TIME =  353.41  Seconds,  5.89  mins,  0.1  hour
+ ......... EPISODE =  800 ......... Current Time =  22:37:05  ..... ELAPSED TIME =  477.8  Seconds,  7.96  mins,  0.13  hour
+ ......... EPISODE =  1000 ......... Current Time =  22:38:59  ..... ELAPSED TIME =  591.13  Seconds,  9.85  mins,  0.16  hour
+ ......... EPISODE =  1200 ......... Current Time =  22:40:35  ..... ELAPSED TIME =  687.62  Seconds,  11.46  mins,  0.19  hour
+ ......... EPISODE =  1400 ......... Current Time =  22:42:18  ..... ELAPSED TIME =  790.43  Seconds,  13.17  mins,  0.22  hour
+ ......... EPISODE =  1600 ......... Current Time =  22:43:48  ..... ELAPSED TIME =  880.39  Seconds,  14.67  mins,  0.24  hour
+ ......... EPISODE =  1800 ......... Current Time =  22:45:10  ..... ELAPSED TIME =  963.03  Seconds,  16.05  mins,  0.27  hour
+ ......... EPISODE =  2000 ......... Current Time =  22:46:20  ..... ELAPSED TIME =  1033.03  Seconds,  17.22  mins,  0.29  hour
+ ......... EPISODE =  2200 ......... Current Time =  22:47:29  ..... ELAPSED TIME =  1101.69  Seconds,  18.36  mins,  0.31  hour
+ ......... EPISODE =  2400 ......... Current Time =  22:48:37  ..... ELAPSED TIME =  1169.42  Seconds,  19.49  mins,  0.32  hour
+ ......... EPISODE =  2600 ......... Current Time =  22:49:37  ..... ELAPSED TIME =  1230.01  Seconds,  20.5  mins,  0.34  hour
+ ......... EPISODE =  2800 ......... Current Time =  22:50:32  ..... ELAPSED TIME =  1284.55  Seconds,  21.41  mins,  0.36  hour
+ ......... EPISODE =  3000 ......... Current Time =  22:51:23  ..... ELAPSED TIME =  1335.6  Seconds,  22.26  mins,  0.37  hour
+ ......... EPISODE =  3200 ......... Current Time =  22:52:10  ..... ELAPSED TIME =  1382.99  Seconds,  23.05  mins,  0.38  hour
+ ......... EPISODE =  3400 ......... Current Time =  22:52:54  ..... ELAPSED TIME =  1426.52  Seconds,  23.78  mins,  0.4  hour
+ ......... EPISODE =  3600 ......... Current Time =  22:53:36  ..... ELAPSED TIME =  1468.23  Seconds,  24.47  mins,  0.41  hour
+ ......... EPISODE =  3800 ......... Current Time =  22:54:10  ..... ELAPSED TIME =  1502.51  Seconds,  25.04  mins,  0.42  hour
+ ......... EPISODE =  4000 ......... Current Time =  22:54:41  ..... ELAPSED TIME =  1533.58  Seconds,  25.56  mins,  0.43  hour
+ ......... EPISODE =  4200 ......... Current Time =  22:55:19  ..... ELAPSED TIME =  1571.65  Seconds,  26.19  mins,  0.44  hour
+ ......... EPISODE =  4400 ......... Current Time =  22:55:45  ..... ELAPSED TIME =  1597.88  Seconds,  26.63  mins,  0.44  hour
+ ......... EPISODE =  4600 ......... Current Time =  22:56:12  ..... ELAPSED TIME =  1624.79  Seconds,  27.08  mins,  0.45  hour
+ ......... EPISODE =  4800 ......... Current Time =  22:56:40  ..... ELAPSED TIME =  1653.0  Seconds,  27.55  mins,  0.46  hour
+ ......... EPISODE =  5000 ......... Current Time =  22:57:08  ..... ELAPSED TIME =  1680.23  Seconds,  28.0  mins,  0.47  hour
+ ......... EPISODE =  5200 ......... Current Time =  22:57:38  ..... ELAPSED TIME =  1710.56  Seconds,  28.51  mins,  0.48  hour
+ ......... EPISODE =  5400 ......... Current Time =  22:58:07  ..... ELAPSED TIME =  1739.98  Seconds,  29.0  mins,  0.48  hour
+ ......... EPISODE =  5600 ......... Current Time =  22:58:34  ..... ELAPSED TIME =  1766.49  Seconds,  29.44  mins,  0.49  hour
+ ......... EPISODE =  5800 ......... Current Time =  22:59:01  ..... ELAPSED TIME =  1793.26  Seconds,  29.89  mins,  0.5  hour
+ ......... EPISODE =  6000 ......... Current Time =  22:59:30  ..... ELAPSED TIME =  1822.34  Seconds,  30.37  mins,  0.51  hour
+ ......... EPISODE =  6200 ......... Current Time =  22:59:57  ..... ELAPSED TIME =  1850.08  Seconds,  30.83  mins,  0.51  hour
+ ......... EPISODE =  6400 ......... Current Time =  23:00:25  ..... ELAPSED TIME =  1877.81  Seconds,  31.3  mins,  0.52  hour
+ ......... EPISODE =  6600 ......... Current Time =  23:00:54  ..... ELAPSED TIME =  1906.27  Seconds,  31.77  mins,  0.53  hour
+ ......... EPISODE =  6800 ......... Current Time =  23:01:21  ..... ELAPSED TIME =  1933.64  Seconds,  32.23  mins,  0.54  hour
+ ......... EPISODE =  7000 ......... Current Time =  23:01:48  ..... ELAPSED TIME =  1960.16  Seconds,  32.67  mins,  0.54  hour
+ ......... EPISODE =  7200 ......... Current Time =  23:02:15  ..... ELAPSED TIME =  1987.26  Seconds,  33.12  mins,  0.55  hour
+ ......... EPISODE =  7400 ......... Current Time =  23:02:44  ..... ELAPSED TIME =  2017.07  Seconds,  33.62  mins,  0.56  hour
+ ......... EPISODE =  7600 ......... Current Time =  23:03:12  ..... ELAPSED TIME =  2044.62  Seconds,  34.08  mins,  0.57  hour
+ ......... EPISODE =  7800 ......... Current Time =  23:03:39  ..... ELAPSED TIME =  2071.97  Seconds,  34.53  mins,  0.58  hour
+ ......... EPISODE =  8000 ......... Current Time =  23:04:08  ..... ELAPSED TIME =  2100.15  Seconds,  35.0  mins,  0.58  hour
+ ......... EPISODE =  8200 ......... Current Time =  23:04:35  ..... ELAPSED TIME =  2127.11  Seconds,  35.45  mins,  0.59  hour
+ ......... EPISODE =  8400 ......... Current Time =  23:05:05  ..... ELAPSED TIME =  2157.23  Seconds,  35.95  mins,  0.6  hour
+ ......... EPISODE =  8600 ......... Current Time =  23:05:32  ..... ELAPSED TIME =  2184.1  Seconds,  36.4  mins,  0.61  hour
+ ......... EPISODE =  8800 ......... Current Time =  23:06:00  ..... ELAPSED TIME =  2212.97  Seconds,  36.88  mins,  0.61  hour
+ ......... EPISODE =  9000 ......... Current Time =  23:06:29  ..... ELAPSED TIME =  2242.03  Seconds,  37.37  mins,  0.62  hour
+ ......... EPISODE =  9200 ......... Current Time =  23:06:57  ..... ELAPSED TIME =  2269.53  Seconds,  37.83  mins,  0.63  hour
+ ......... EPISODE =  9400 ......... Current Time =  23:07:26  ..... ELAPSED TIME =  2298.68  Seconds,  38.31  mins,  0.64  hour
+ ......... EPISODE =  9600 ......... Current Time =  23:07:55  ..... ELAPSED TIME =  2327.95  Seconds,  38.8  mins,  0.65  hour
+ ......... EPISODE =  9800 ......... Current Time =  23:08:22  ..... ELAPSED TIME =  2354.53  Seconds,  39.24  mins,  0.65  hour
+ ......... EPISODE =  10000 ......... Current Time =  23:08:48  ..... ELAPSED TIME =  2380.14  Seconds,  39.67  mins,  0.66  hour
+......... TOTAL RUNs =  1
+
+********** INFO:
+ Episode:  1 
+ Distance:  0 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.0 
+ Throughput:  0.0 
+ Interference on Neighbor UEs:  0.0
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ New Cell: 1 
+ Next State 
+ Action_power:  100.0 
+ Interference on UAV:  6.688022370579558 
+ SINR:  0.04162318793771628 
+ Throughput:  0.40053792958372886 
+ Interference on Neighbor UEs:  2.0470301348993205
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ Current Cell: 1 
+ Current State 
+ Interference on UAV:  6.688022370579558 
+ SINR:  0.04162318793771628 
+ Throughput:  0.40053792958372886 
+ Interference on Neighbor UEs:  2.0470301348993205
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ New Cell: 2 
+ Next State 
+ Action_power:  100.0 
+ Interference on UAV:  10.339941628823224 
+ SINR:  0.028218840138175143 
+ Throughput:  0.40053792958372886 
+ Interference on Neighbor UEs:  2.5852627803632355
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ Current Cell: 2 
+ Current State 
+ Interference on UAV:  10.339941628823224 
+ SINR:  0.028218840138175143 
+ Throughput:  0.40053792958372886 
+ Interference on Neighbor UEs:  2.5852627803632355
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ New Cell: 8 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  6.350193369449842 
+ SINR:  0.08707253916068111 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.7964707562110895
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ Current Cell: 8 
+ Current State 
+ Interference on UAV:  6.350193369449842 
+ SINR:  0.08707253916068111 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.7964707562110895
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ New Cell: 13 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.274095186736932 
+ SINR:  0.10200674056602176 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.737868225725212
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ Current Cell: 13 
+ Current State 
+ Interference on UAV:  5.274095186736932 
+ SINR:  0.10200674056602176 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.737868225725212
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ New Cell: 19 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  2.9247402265555995 
+ SINR:  0.16306811739274574 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.2392979936263
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ Current Cell: 19 
+ Current State 
+ Interference on UAV:  2.9247402265555995 
+ SINR:  0.16306811739274574 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.2392979936263
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ New Cell: 23 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ Current Cell: 23 
+ Current State 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ New Cell: 23 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ Current Cell: 23 
+ Current State 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+********** INFO:
+ Episode:  1 
+ Distance:  8 
+ New Cell: 23 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  5.726527321453062 
+ SINR:  0.09514567761567456 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.53625974348189
+
+tested_policy_feature_expectation:  [1.60922425 0.         0.56146512 6.60266908 0.73755629]
+
+weights:  [-1.96837634  0.53951895 -4.96538319  0.82033745 -1.80550083] 
+ weights_norm:  [-0.34393781  0.09427108 -0.86761001  0.14333898 -0.31547829] 
+
+...... Learner =  7   Hyper Distance =  0.501600667872273
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 10              
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer started.
+Quadratic to conic reformulation started.
+Quadratic to conic reformulation terminated. Time: 0.00    
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 10              
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 8               
+Optimizer  - solved problem         : the dual        
+Optimizer  - Constraints            : 5
+Optimizer  - Cones                  : 1
+Optimizer  - Scalar variables       : 15                conic                  : 6               
+Optimizer  - Semi-definite variables: 0                 scalarized             : 0               
+Factor     - setup time             : 0.00              dense det. time        : 0.00            
+Factor     - ML order time          : 0.00              GP order time          : 0.00            
+Factor     - nonzeros before factor : 15                after factor           : 15              
+Factor     - dense dim.             : 0                 flops                  : 3.05e+02        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   1.0e+00  1.0e+00  2.0e+00  0.00e+00   5.000000000e-01   0.000000000e+00   1.0e+00  0.01  
+1   2.9e-01  2.9e-01  1.2e+00  -1.46e+00  8.725798879e+00   1.876039183e+01   2.9e-01  0.01  
+2   1.6e-01  1.6e-01  1.1e-01  7.91e-01   2.000346505e+01   1.653306634e+01   1.6e-01  0.01  
+3   2.9e-02  2.9e-02  5.7e-03  1.01e+00   2.860322204e+01   2.783539601e+01   2.9e-02  0.01  
+4   8.2e-03  8.2e-03  1.9e-03  1.05e+00   3.214348657e+01   3.198803106e+01   8.2e-03  0.01  
+5   1.9e-03  1.9e-03  2.7e-04  1.06e+00   3.251944463e+01   3.249944076e+01   1.9e-03  0.01  
+6   1.0e-04  1.0e-04  3.3e-06  1.01e+00   3.274019565e+01   3.273925100e+01   1.0e-04  0.01  
+7   8.6e-08  8.6e-08  8.4e-11  1.00e+00   3.275339169e+01   3.275339092e+01   8.6e-08  0.01  
+8   1.3e-09  1.3e-09  1.6e-13  1.00e+00   3.275340323e+01   3.275340322e+01   1.3e-09  0.01  
+Optimizer terminated. Time: 0.01    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 3.2753403229e+01    nrm: 5e+00    Viol.  con: 3e-09    var: 0e+00  
+  Dual.    obj: 3.2753403221e+01    nrm: 3e+01    Viol.  con: 0e+00    var: 3e-05  
+Optimization status is:  optimal
+
+weights:  [-1.96856184  0.5395553  -4.9653027   0.82036858 -1.80549498] 
+ weights_norm:  [-0.34397022  0.09427743 -0.86759594  0.14334442 -0.31547727] 
+
+......... TOTAL EPOCHS =  10002
+ ......... EPISODE =  200 ......... Current Time =  23:10:37  ..... ELAPSED TIME =  109.32  Seconds,  1.82  mins,  0.03  hour
+ ......... EPISODE =  400 ......... Current Time =  23:12:40  ..... ELAPSED TIME =  232.0  Seconds,  3.87  mins,  0.06  hour
+ ......... EPISODE =  600 ......... Current Time =  23:14:33  ..... ELAPSED TIME =  345.36  Seconds,  5.76  mins,  0.1  hour
+ ......... EPISODE =  800 ......... Current Time =  23:16:36  ..... ELAPSED TIME =  467.61  Seconds,  7.79  mins,  0.13  hour
+ ......... EPISODE =  1000 ......... Current Time =  23:18:37  ..... ELAPSED TIME =  588.56  Seconds,  9.81  mins,  0.16  hour
+ ......... EPISODE =  1200 ......... Current Time =  23:20:32  ..... ELAPSED TIME =  704.25  Seconds,  11.74  mins,  0.2  hour
+ ......... EPISODE =  1400 ......... Current Time =  23:22:11  ..... ELAPSED TIME =  802.96  Seconds,  13.38  mins,  0.22  hour
+ ......... EPISODE =  1600 ......... Current Time =  23:23:47  ..... ELAPSED TIME =  899.23  Seconds,  14.99  mins,  0.25  hour
+ ......... EPISODE =  1800 ......... Current Time =  23:25:07  ..... ELAPSED TIME =  978.74  Seconds,  16.31  mins,  0.27  hour
+ ......... EPISODE =  2000 ......... Current Time =  23:26:19  ..... ELAPSED TIME =  1050.81  Seconds,  17.51  mins,  0.29  hour
+ ......... EPISODE =  2200 ......... Current Time =  23:27:31  ..... ELAPSED TIME =  1122.49  Seconds,  18.71  mins,  0.31  hour
+ ......... EPISODE =  2400 ......... Current Time =  23:28:43  ..... ELAPSED TIME =  1195.09  Seconds,  19.92  mins,  0.33  hour
+ ......... EPISODE =  2600 ......... Current Time =  23:29:41  ..... ELAPSED TIME =  1253.47  Seconds,  20.89  mins,  0.35  hour
+ ......... EPISODE =  2800 ......... Current Time =  23:30:42  ..... ELAPSED TIME =  1313.87  Seconds,  21.9  mins,  0.36  hour
+ ......... EPISODE =  3000 ......... Current Time =  23:31:34  ..... ELAPSED TIME =  1366.44  Seconds,  22.77  mins,  0.38  hour
+ ......... EPISODE =  3200 ......... Current Time =  23:32:20  ..... ELAPSED TIME =  1411.86  Seconds,  23.53  mins,  0.39  hour
+ ......... EPISODE =  3400 ......... Current Time =  23:33:03  ..... ELAPSED TIME =  1455.34  Seconds,  24.26  mins,  0.4  hour
+ ......... EPISODE =  3600 ......... Current Time =  23:33:49  ..... ELAPSED TIME =  1501.08  Seconds,  25.02  mins,  0.42  hour
+ ......... EPISODE =  3800 ......... Current Time =  23:34:28  ..... ELAPSED TIME =  1539.9  Seconds,  25.66  mins,  0.43  hour
+ ......... EPISODE =  4000 ......... Current Time =  23:35:02  ..... ELAPSED TIME =  1574.3  Seconds,  26.24  mins,  0.44  hour
+ ......... EPISODE =  4200 ......... Current Time =  23:35:40  ..... ELAPSED TIME =  1611.94  Seconds,  26.87  mins,  0.45  hour
+ ......... EPISODE =  4400 ......... Current Time =  23:36:13  ..... ELAPSED TIME =  1645.02  Seconds,  27.42  mins,  0.46  hour
+ ......... EPISODE =  4600 ......... Current Time =  23:36:44  ..... ELAPSED TIME =  1675.9  Seconds,  27.93  mins,  0.47  hour
+ ......... EPISODE =  4800 ......... Current Time =  23:37:14  ..... ELAPSED TIME =  1705.75  Seconds,  28.43  mins,  0.47  hour
+ ......... EPISODE =  5000 ......... Current Time =  23:37:44  ..... ELAPSED TIME =  1735.66  Seconds,  28.93  mins,  0.48  hour
+ ......... EPISODE =  5200 ......... Current Time =  23:38:14  ..... ELAPSED TIME =  1766.2  Seconds,  29.44  mins,  0.49  hour
+ ......... EPISODE =  5400 ......... Current Time =  23:38:41  ..... ELAPSED TIME =  1792.92  Seconds,  29.88  mins,  0.5  hour
+ ......... EPISODE =  5600 ......... Current Time =  23:39:10  ..... ELAPSED TIME =  1822.02  Seconds,  30.37  mins,  0.51  hour
+ ......... EPISODE =  5800 ......... Current Time =  23:39:42  ..... ELAPSED TIME =  1853.9  Seconds,  30.9  mins,  0.51  hour
+ ......... EPISODE =  6000 ......... Current Time =  23:40:13  ..... ELAPSED TIME =  1884.59  Seconds,  31.41  mins,  0.52  hour
+ ......... EPISODE =  6200 ......... Current Time =  23:40:41  ..... ELAPSED TIME =  1913.45  Seconds,  31.89  mins,  0.53  hour
+ ......... EPISODE =  6400 ......... Current Time =  23:41:08  ..... ELAPSED TIME =  1940.41  Seconds,  32.34  mins,  0.54  hour
+ ......... EPISODE =  6600 ......... Current Time =  23:41:37  ..... ELAPSED TIME =  1969.31  Seconds,  32.82  mins,  0.55  hour
+ ......... EPISODE =  6800 ......... Current Time =  23:42:05  ..... ELAPSED TIME =  1996.58  Seconds,  33.28  mins,  0.55  hour
+ ......... EPISODE =  7000 ......... Current Time =  23:42:32  ..... ELAPSED TIME =  2024.25  Seconds,  33.74  mins,  0.56  hour
+ ......... EPISODE =  7200 ......... Current Time =  23:43:00  ..... ELAPSED TIME =  2051.66  Seconds,  34.19  mins,  0.57  hour
+ ......... EPISODE =  7400 ......... Current Time =  23:43:28  ..... ELAPSED TIME =  2080.36  Seconds,  34.67  mins,  0.58  hour
+ ......... EPISODE =  7600 ......... Current Time =  23:43:59  ..... ELAPSED TIME =  2110.91  Seconds,  35.18  mins,  0.59  hour
+ ......... EPISODE =  7800 ......... Current Time =  23:44:27  ..... ELAPSED TIME =  2139.14  Seconds,  35.65  mins,  0.59  hour
+ ......... EPISODE =  8000 ......... Current Time =  23:44:59  ..... ELAPSED TIME =  2170.62  Seconds,  36.18  mins,  0.6  hour
+ ......... EPISODE =  8200 ......... Current Time =  23:45:29  ..... ELAPSED TIME =  2200.74  Seconds,  36.68  mins,  0.61  hour
+ ......... EPISODE =  8400 ......... Current Time =  23:45:57  ..... ELAPSED TIME =  2229.0  Seconds,  37.15  mins,  0.62  hour
+ ......... EPISODE =  8600 ......... Current Time =  23:46:24  ..... ELAPSED TIME =  2255.88  Seconds,  37.6  mins,  0.63  hour
+ ......... EPISODE =  8800 ......... Current Time =  23:46:53  ..... ELAPSED TIME =  2284.52  Seconds,  38.08  mins,  0.63  hour
+ ......... EPISODE =  9000 ......... Current Time =  23:47:22  ..... ELAPSED TIME =  2313.57  Seconds,  38.56  mins,  0.64  hour
+ ......... EPISODE =  9200 ......... Current Time =  23:47:54  ..... ELAPSED TIME =  2346.34  Seconds,  39.11  mins,  0.65  hour
+ ......... EPISODE =  9400 ......... Current Time =  23:48:21  ..... ELAPSED TIME =  2373.34  Seconds,  39.56  mins,  0.66  hour
+ ......... EPISODE =  9600 ......... Current Time =  23:48:48  ..... ELAPSED TIME =  2400.32  Seconds,  40.01  mins,  0.67  hour
+ ......... EPISODE =  9800 ......... Current Time =  23:49:15  ..... ELAPSED TIME =  2426.55  Seconds,  40.44  mins,  0.67  hour
+ ......... EPISODE =  10000 ......... Current Time =  23:49:42  ..... ELAPSED TIME =  2453.71  Seconds,  40.9  mins,  0.68  hour
+......... TOTAL RUNs =  1
+
+********** INFO:
+ Episode:  1 
+ Distance:  0 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.0 
+ Throughput:  0.0 
+ Interference on Neighbor UEs:  0.0
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ New Cell: 1 
+ Next State 
+ Action_power:  150.0 
+ Interference on UAV:  6.688022370579558 
+ SINR:  0.06243478190657443 
+ Throughput:  0.5655971758542251 
+ Interference on Neighbor UEs:  3.070545202348981
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ Current Cell: 1 
+ Current State 
+ Interference on UAV:  6.688022370579558 
+ SINR:  0.06243478190657443 
+ Throughput:  0.5655971758542251 
+ Interference on Neighbor UEs:  3.070545202348981
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ New Cell: 2 
+ Next State 
+ Action_power:  150.0 
+ Interference on UAV:  10.339941628823224 
+ SINR:  0.04232826020726271 
+ Throughput:  0.5655971758542251 
+ Interference on Neighbor UEs:  3.8778941705448537
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ Current Cell: 2 
+ Current State 
+ Interference on UAV:  10.339941628823224 
+ SINR:  0.04232826020726271 
+ Throughput:  0.5655971758542251 
+ Interference on Neighbor UEs:  3.8778941705448537
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ New Cell: 8 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  6.350193369449842 
+ SINR:  0.08707253916068111 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.7964707562110895
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ Current Cell: 8 
+ Current State 
+ Interference on UAV:  6.350193369449842 
+ SINR:  0.08707253916068111 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.7964707562110895
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ New Cell: 9 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  8.7840341991448 
+ SINR:  0.06541269040698375 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.089278351347072
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ Current Cell: 9 
+ Current State 
+ Interference on UAV:  8.7840341991448 
+ SINR:  0.06541269040698375 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  6.089278351347072
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ New Cell: 14 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  7.371953311489795 
+ SINR:  0.07644572015489555 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  3.1315901669017636
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ Current Cell: 14 
+ Current State 
+ Interference on UAV:  7.371953311489795 
+ SINR:  0.07644572015489555 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  3.1315901669017636
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ New Cell: 19 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  2.9247402265555995 
+ SINR:  0.16306811739274574 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.2392979936263
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ Current Cell: 19 
+ Current State 
+ Interference on UAV:  2.9247402265555995 
+ SINR:  0.16306811739274574 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  4.2392979936263
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ New Cell: 24 
+ Next State 
+ Action_power:  200.0 
+ Interference on UAV:  2.0645581503861927 
+ SINR:  0.20883924161117576 
+ Throughput:  0.7136958148433591 
+ Interference on Neighbor UEs:  2.406127156276537
+
+tested_policy_feature_expectation:  [1.77550194 4.9700749  0.39268093 6.23548941 0.56514457]
+
+weights:  [-1.96856184  0.5395553  -4.9653027   0.82036858 -1.80549498] 
+ weights_norm:  [-0.34397022  0.09427743 -0.86759594  0.14334442 -0.31547727] 
+
+...... Learner =  8   Hyper Distance =  0.05795836140829434
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 11              
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer started.
+Quadratic to conic reformulation started.
+Quadratic to conic reformulation terminated. Time: 0.00    
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 11              
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 8               
+Optimizer  - solved problem         : the dual        
+Optimizer  - Constraints            : 5
+Optimizer  - Cones                  : 1
+Optimizer  - Scalar variables       : 16                conic                  : 6               
+Optimizer  - Semi-definite variables: 0                 scalarized             : 0               
+Factor     - setup time             : 0.00              dense det. time        : 0.00            
+Factor     - ML order time          : 0.00              GP order time          : 0.00            
+Factor     - nonzeros before factor : 15                after factor           : 15              
+Factor     - dense dim.             : 0                 flops                  : 3.35e+02        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   1.0e+00  1.0e+00  2.0e+00  0.00e+00   5.000000000e-01   0.000000000e+00   1.0e+00  0.03  
+1   2.8e-01  2.8e-01  1.3e+00  -1.51e+00  1.448082641e+01   3.380808151e+01   2.8e-01  0.03  
+2   1.5e-01  1.5e-01  1.3e-01  3.04e-01   3.816664756e+01   3.233010997e+01   1.5e-01  0.03  
+3   3.1e-02  3.1e-02  1.2e-02  6.42e-01   6.929319121e+01   6.745046771e+01   3.1e-02  0.03  
+4   1.5e-02  1.5e-02  5.3e-03  1.19e+00   7.357532648e+01   7.295611870e+01   1.5e-02  0.03  
+5   7.5e-04  7.5e-04  1.2e-04  9.21e-01   8.190211797e+01   8.192946977e+01   7.5e-04  0.03  
+6   1.9e-05  1.9e-05  5.0e-07  1.01e+00   8.200435583e+01   8.200505980e+01   1.9e-05  0.03  
+7   6.8e-07  6.8e-07  3.3e-09  1.00e+00   8.200654209e+01   8.200656699e+01   6.8e-07  0.03  
+8   3.4e-08  3.4e-08  3.7e-11  1.00e+00   8.200661234e+01   8.200661358e+01   3.4e-08  0.03  
+9   4.7e-09  4.7e-09  1.9e-12  1.00e+00   8.200661700e+01   8.200661717e+01   4.7e-09  0.03  
+Optimizer terminated. Time: 0.03    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 8.2006616894e+01    nrm: 7e+00    Viol.  con: 1e-08    var: 0e+00  
+  Dual.    obj: 8.2006617272e+01    nrm: 8e+01    Viol.  con: 1e-07    var: 2e-04  
+Optimization status is:  optimal
+
+weights:  [ 1.97803488 -0.15403246 -7.49454604  0.29446416 -4.67068939] 
+ weights_norm:  [ 0.2184286  -0.01700935 -0.82760077  0.03251682 -0.51577055] 
+
+......... TOTAL EPOCHS =  10002
+ ......... EPISODE =  200 ......... Current Time =  23:51:38  ..... ELAPSED TIME =  115.62  Seconds,  1.93  mins,  0.03  hour
+ ......... EPISODE =  400 ......... Current Time =  23:53:40  ..... ELAPSED TIME =  238.19  Seconds,  3.97  mins,  0.07  hour
+ ......... EPISODE =  600 ......... Current Time =  23:55:37  ..... ELAPSED TIME =  354.85  Seconds,  5.91  mins,  0.1  hour
+ ......... EPISODE =  800 ......... Current Time =  23:57:34  ..... ELAPSED TIME =  471.59  Seconds,  7.86  mins,  0.13  hour
+ ......... EPISODE =  1000 ......... Current Time =  23:59:31  ..... ELAPSED TIME =  588.27  Seconds,  9.8  mins,  0.16  hour
+ ......... EPISODE =  1200 ......... Current Time =  00:01:32  ..... ELAPSED TIME =  709.22  Seconds,  11.82  mins,  0.2  hour
+ ......... EPISODE =  1400 ......... Current Time =  00:03:41  ..... ELAPSED TIME =  838.53  Seconds,  13.98  mins,  0.23  hour
+ ......... EPISODE =  1600 ......... Current Time =  00:06:32  ..... ELAPSED TIME =  1009.78  Seconds,  16.83  mins,  0.28  hour
+ ......... EPISODE =  1800 ......... Current Time =  00:09:33  ..... ELAPSED TIME =  1191.17  Seconds,  19.85  mins,  0.33  hour
+ ......... EPISODE =  2000 ......... Current Time =  00:13:09  ..... ELAPSED TIME =  1407.08  Seconds,  23.45  mins,  0.39  hour
+ ......... EPISODE =  2200 ......... Current Time =  00:17:34  ..... ELAPSED TIME =  1671.51  Seconds,  27.86  mins,  0.46  hour
+ ......... EPISODE =  2400 ......... Current Time =  00:23:47  ..... ELAPSED TIME =  2044.92  Seconds,  34.08  mins,  0.57  hour
+ ......... EPISODE =  2600 ......... Current Time =  00:29:29  ..... ELAPSED TIME =  2386.95  Seconds,  39.78  mins,  0.66  hour
+ ......... EPISODE =  2800 ......... Current Time =  00:37:32  ..... ELAPSED TIME =  2869.93  Seconds,  47.83  mins,  0.8  hour
+ ......... EPISODE =  3000 ......... Current Time =  00:47:31  ..... ELAPSED TIME =  3468.94  Seconds,  57.82  mins,  0.96  hour
+ ......... EPISODE =  3200 ......... Current Time =  01:01:12  ..... ELAPSED TIME =  4290.0  Seconds,  71.5  mins,  1.19  hour
+ ......... EPISODE =  3400 ......... Current Time =  01:15:24  ..... ELAPSED TIME =  5141.3  Seconds,  85.69  mins,  1.43  hour
+ ......... EPISODE =  3600 ......... Current Time =  01:34:51  ..... ELAPSED TIME =  6308.84  Seconds,  105.15  mins,  1.75  hour
+ ......... EPISODE =  3800 ......... Current Time =  02:00:10  ..... ELAPSED TIME =  7827.96  Seconds,  130.47  mins,  2.17  hour
+ ......... EPISODE =  4000 ......... Current Time =  02:27:24  ..... ELAPSED TIME =  9461.79  Seconds,  157.7  mins,  2.63  hour
+ ......... EPISODE =  4200 ......... Current Time =  03:10:40  ..... ELAPSED TIME =  12057.83  Seconds,  200.96  mins,  3.35  hour
+ ......... EPISODE =  4400 ......... Current Time =  03:58:52  ..... ELAPSED TIME =  14949.34  Seconds,  249.16  mins,  4.15  hour
+ ......... EPISODE =  4600 ......... Current Time =  04:59:32  ..... ELAPSED TIME =  18590.03  Seconds,  309.83  mins,  5.16  hour
+ ......... EPISODE =  4800 ......... Current Time =  05:58:22  ..... ELAPSED TIME =  22119.65  Seconds,  368.66  mins,  6.14  hour
+ ......... EPISODE =  5000 ......... Current Time =  07:02:05  ..... ELAPSED TIME =  25942.2  Seconds,  432.37  mins,  7.21  hour
+ ......... EPISODE =  5200 ......... Current Time =  08:00:41  ..... ELAPSED TIME =  29459.13  Seconds,  490.99  mins,  8.18  hour
+ ......... EPISODE =  5400 ......... Current Time =  08:56:09  ..... ELAPSED TIME =  32787.13  Seconds,  546.45  mins,  9.11  hour
+ ......... EPISODE =  5600 ......... Current Time =  09:57:18  ..... ELAPSED TIME =  36455.87  Seconds,  607.6  mins,  10.13  hour
+ ......... EPISODE =  5800 ......... Current Time =  10:47:50  ..... ELAPSED TIME =  39487.43  Seconds,  658.12  mins,  10.97  hour
+ ......... EPISODE =  6000 ......... Current Time =  11:48:39  ..... ELAPSED TIME =  43136.58  Seconds,  718.94  mins,  11.98  hour
+ ......... EPISODE =  6200 ......... Current Time =  12:47:23  ..... ELAPSED TIME =  46660.68  Seconds,  777.68  mins,  12.96  hour
+ ......... EPISODE =  6400 ......... Current Time =  13:45:43  ..... ELAPSED TIME =  50160.78  Seconds,  836.01  mins,  13.93  hour
+ ......... EPISODE =  6600 ......... Current Time =  14:51:56  ..... ELAPSED TIME =  54133.95  Seconds,  902.23  mins,  15.04  hour
+ ......... EPISODE =  6800 ......... Current Time =  15:50:49  ..... ELAPSED TIME =  57666.86  Seconds,  961.11  mins,  16.02  hour
+ ......... EPISODE =  7000 ......... Current Time =  16:49:23  ..... ELAPSED TIME =  61180.25  Seconds,  1019.67  mins,  16.99  hour
+ ......... EPISODE =  7200 ......... Current Time =  17:47:37  ..... ELAPSED TIME =  64674.34  Seconds,  1077.91  mins,  17.97  hour
+ ......... EPISODE =  7400 ......... Current Time =  18:50:20  ..... ELAPSED TIME =  68437.52  Seconds,  1140.63  mins,  19.01  hour
+ ......... EPISODE =  7600 ......... Current Time =  19:53:00  ..... ELAPSED TIME =  72197.81  Seconds,  1203.3  mins,  20.05  hour
+ ......... EPISODE =  7800 ......... Current Time =  20:55:44  ..... ELAPSED TIME =  75961.62  Seconds,  1266.03  mins,  21.1  hour
+ ......... EPISODE =  8000 ......... Current Time =  21:59:38  ..... ELAPSED TIME =  79796.05  Seconds,  1329.93  mins,  22.17  hour
+ ......... EPISODE =  8200 ......... Current Time =  23:08:12  ..... ELAPSED TIME =  83909.59  Seconds,  1398.49  mins,  23.31  hour
+ ......... EPISODE =  8400 ......... Current Time =  00:05:44  ..... ELAPSED TIME =  87361.91  Seconds,  1456.03  mins,  24.27  hour
+ ......... EPISODE =  8600 ......... Current Time =  01:03:34  ..... ELAPSED TIME =  90832.04  Seconds,  1513.87  mins,  25.23  hour
+ ......... EPISODE =  8800 ......... Current Time =  02:06:30  ..... ELAPSED TIME =  94607.66  Seconds,  1576.79  mins,  26.28  hour
+ ......... EPISODE =  9000 ......... Current Time =  03:06:35  ..... ELAPSED TIME =  98212.35  Seconds,  1636.87  mins,  27.28  hour
+ ......... EPISODE =  9200 ......... Current Time =  04:05:40  ..... ELAPSED TIME =  101758.07  Seconds,  1695.97  mins,  28.27  hour
+ ......... EPISODE =  9400 ......... Current Time =  05:05:28  ..... ELAPSED TIME =  105345.6  Seconds,  1755.76  mins,  29.26  hour
+ ......... EPISODE =  9600 ......... Current Time =  06:08:54  ..... ELAPSED TIME =  109152.15  Seconds,  1819.2  mins,  30.32  hour
+ ......... EPISODE =  9800 ......... Current Time =  07:10:06  ..... ELAPSED TIME =  112823.69  Seconds,  1880.39  mins,  31.34  hour
+ ......... EPISODE =  10000 ......... Current Time =  08:06:29  ..... ELAPSED TIME =  116206.67  Seconds,  1936.78  mins,  32.28  hour
+......... TOTAL RUNs =  1
+
+********** INFO:
+ Episode:  1 
+ Distance:  0 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.0 
+ Throughput:  0.0 
+ Interference on Neighbor UEs:  0.0
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ New Cell: 0 
+ Next State 
+ Action_power:  50.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.01975771571002174 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  0.9764680410898715
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.01975771571002174 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  0.9764680410898715
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ New Cell: 0 
+ Next State 
+ Action_power:  50.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.01975771571002174 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  0.9764680410898715
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.01975771571002174 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  0.9764680410898715
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ New Cell: 0 
+ Next State 
+ Action_power:  50.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.01975771571002174 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  0.9764680410898715
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.01975771571002174 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  0.9764680410898715
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ New Cell: 0 
+ Next State 
+ Action_power:  50.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.01975771571002174 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  0.9764680410898715
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.01975771571002174 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  0.9764680410898715
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ New Cell: 0 
+ Next State 
+ Action_power:  50.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.01975771571002174 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  0.9764680410898715
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.01975771571002174 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  0.9764680410898715
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ New Cell: 0 
+ Next State 
+ Action_power:  50.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.01975771571002174 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  0.9764680410898715
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.01975771571002174 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  0.9764680410898715
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ New Cell: 0 
+ Next State 
+ Action_power:  50.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.01975771571002174 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  0.9764680410898715
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.01975771571002174 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  0.9764680410898715
+
+********** INFO:
+ Episode:  1 
+ Distance:  8 
+ New Cell: 0 
+ Next State 
+ Action_power:  50.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.01975771571002174 
+ Throughput:  0.21412480535284734 
+ Interference on Neighbor UEs:  0.9764680410898715
+
+tested_policy_feature_expectation:  [7.97205593 0.         0.20408463 0.71759268 0.00862731]
+
+weights:  [ 1.97803488 -0.15403246 -7.49454604  0.29446416 -4.67068939] 
+ weights_norm:  [ 0.2184286  -0.01700935 -0.82760077  0.03251682 -0.51577055] 
+
+...... Learner =  9   Hyper Distance =  1.4808814477687855
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 12              
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer started.
+Quadratic to conic reformulation started.
+Quadratic to conic reformulation terminated. Time: 0.00    
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 12              
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 8               
+Optimizer  - solved problem         : the dual        
+Optimizer  - Constraints            : 5
+Optimizer  - Cones                  : 1
+Optimizer  - Scalar variables       : 17                conic                  : 6               
+Optimizer  - Semi-definite variables: 0                 scalarized             : 0               
+Factor     - setup time             : 0.00              dense det. time        : 0.00            
+Factor     - ML order time          : 0.00              GP order time          : 0.00            
+Factor     - nonzeros before factor : 15                after factor           : 15              
+Factor     - dense dim.             : 0                 flops                  : 3.55e+02        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   1.0e+00  1.0e+00  2.0e+00  0.00e+00   5.000000000e-01   0.000000000e+00   1.0e+00  0.01  
+1   2.8e-01  2.8e-01  1.3e+00  -1.51e+00  1.443775683e+01   3.368428301e+01   2.8e-01  0.01  
+2   1.4e-01  1.4e-01  1.2e-01  3.00e-01   4.001214469e+01   3.426407272e+01   1.4e-01  0.01  
+3   1.1e-02  1.1e-02  7.8e-03  2.20e-01   1.293636207e+02   1.293692021e+02   1.1e-02  0.01  
+4   1.0e-03  1.0e-03  1.7e-04  1.07e+00   1.305095202e+02   1.304646914e+02   1.0e-03  0.01  
+5   8.8e-05  8.8e-05  4.3e-06  1.03e+00   1.307798406e+02   1.307763818e+02   8.8e-05  0.01  
+6   1.7e-06  1.7e-06  1.2e-08  1.01e+00   1.308123448e+02   1.308122772e+02   1.7e-06  0.01  
+7   2.8e-07  2.8e-07  8.2e-10  1.00e+00   1.308133434e+02   1.308133358e+02   2.8e-07  0.01  
+8   1.0e-08  1.0e-08  7.0e-12  1.00e+00   1.308136040e+02   1.308136044e+02   1.0e-08  0.01  
+9   3.5e-10  3.5e-10  4.5e-14  1.00e+00   1.308136139e+02   1.308136139e+02   3.5e-10  0.01  
+Optimizer terminated. Time: 0.01    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 1.3081361384e+02    nrm: 8e+00    Viol.  con: 2e-09    var: 0e+00  
+  Dual.    obj: 1.3081361391e+02    nrm: 1e+02    Viol.  con: 3e-09    var: 4e-04  
+Optimization status is:  optimal
+
+weights:  [ 0.01387616  0.35508936 -7.89200524  0.79576868 -8.23227419] 
+ weights_norm:  [ 0.00121323  0.0310464  -0.69001875  0.06957615 -0.71976936] 
+
+......... TOTAL EPOCHS =  10002
+ ......... EPISODE =  200 ......... Current Time =  08:08:53  ..... ELAPSED TIME =  111.1  Seconds,  1.85  mins,  0.03  hour
+ ......... EPISODE =  400 ......... Current Time =  08:11:09  ..... ELAPSED TIME =  246.65  Seconds,  4.11  mins,  0.07  hour
+ ......... EPISODE =  600 ......... Current Time =  08:12:57  ..... ELAPSED TIME =  355.14  Seconds,  5.92  mins,  0.1  hour
+ ......... EPISODE =  800 ......... Current Time =  08:14:40  ..... ELAPSED TIME =  458.12  Seconds,  7.64  mins,  0.13  hour
+ ......... EPISODE =  1000 ......... Current Time =  08:16:34  ..... ELAPSED TIME =  571.46  Seconds,  9.52  mins,  0.16  hour
+ ......... EPISODE =  1200 ......... Current Time =  08:18:31  ..... ELAPSED TIME =  688.57  Seconds,  11.48  mins,  0.19  hour
+ ......... EPISODE =  1400 ......... Current Time =  08:20:35  ..... ELAPSED TIME =  812.22  Seconds,  13.54  mins,  0.23  hour
+ ......... EPISODE =  1600 ......... Current Time =  08:22:40  ..... ELAPSED TIME =  937.99  Seconds,  15.63  mins,  0.26  hour
+ ......... EPISODE =  1800 ......... Current Time =  08:24:57  ..... ELAPSED TIME =  1074.62  Seconds,  17.91  mins,  0.3  hour
+ ......... EPISODE =  2000 ......... Current Time =  08:27:25  ..... ELAPSED TIME =  1223.12  Seconds,  20.39  mins,  0.34  hour
+ ......... EPISODE =  2200 ......... Current Time =  08:30:00  ..... ELAPSED TIME =  1378.07  Seconds,  22.97  mins,  0.38  hour
+ ......... EPISODE =  2400 ......... Current Time =  08:32:46  ..... ELAPSED TIME =  1544.1  Seconds,  25.74  mins,  0.43  hour
+ ......... EPISODE =  2600 ......... Current Time =  08:35:40  ..... ELAPSED TIME =  1717.27  Seconds,  28.62  mins,  0.48  hour
+ ......... EPISODE =  2800 ......... Current Time =  08:38:39  ..... ELAPSED TIME =  1896.68  Seconds,  31.61  mins,  0.53  hour
+ ......... EPISODE =  3000 ......... Current Time =  08:41:47  ..... ELAPSED TIME =  2085.16  Seconds,  34.75  mins,  0.58  hour
+ ......... EPISODE =  3200 ......... Current Time =  08:45:07  ..... ELAPSED TIME =  2284.79  Seconds,  38.08  mins,  0.63  hour
+ ......... EPISODE =  3400 ......... Current Time =  08:48:03  ..... ELAPSED TIME =  2460.23  Seconds,  41.0  mins,  0.68  hour
+ ......... EPISODE =  3600 ......... Current Time =  08:51:16  ..... ELAPSED TIME =  2653.52  Seconds,  44.23  mins,  0.74  hour
+ ......... EPISODE =  3800 ......... Current Time =  08:54:24  ..... ELAPSED TIME =  2842.12  Seconds,  47.37  mins,  0.79  hour
+ ......... EPISODE =  4000 ......... Current Time =  08:58:16  ..... ELAPSED TIME =  3073.95  Seconds,  51.23  mins,  0.85  hour
+ ......... EPISODE =  4200 ......... Current Time =  09:02:06  ..... ELAPSED TIME =  3303.82  Seconds,  55.06  mins,  0.92  hour
+ ......... EPISODE =  4400 ......... Current Time =  09:05:20  ..... ELAPSED TIME =  3498.01  Seconds,  58.3  mins,  0.97  hour
+ ......... EPISODE =  4600 ......... Current Time =  09:09:32  ..... ELAPSED TIME =  3749.61  Seconds,  62.49  mins,  1.04  hour
+ ......... EPISODE =  4800 ......... Current Time =  09:13:54  ..... ELAPSED TIME =  4011.41  Seconds,  66.86  mins,  1.11  hour
+ ......... EPISODE =  5000 ......... Current Time =  09:18:06  ..... ELAPSED TIME =  4263.64  Seconds,  71.06  mins,  1.18  hour
+ ......... EPISODE =  5200 ......... Current Time =  09:21:57  ..... ELAPSED TIME =  4494.39  Seconds,  74.91  mins,  1.25  hour
+ ......... EPISODE =  5400 ......... Current Time =  09:25:26  ..... ELAPSED TIME =  4703.81  Seconds,  78.4  mins,  1.31  hour
+ ......... EPISODE =  5600 ......... Current Time =  09:27:49  ..... ELAPSED TIME =  4846.84  Seconds,  80.78  mins,  1.35  hour
+ ......... EPISODE =  5800 ......... Current Time =  09:30:58  ..... ELAPSED TIME =  5035.5  Seconds,  83.93  mins,  1.4  hour
+ ......... EPISODE =  6000 ......... Current Time =  09:33:26  ..... ELAPSED TIME =  5183.79  Seconds,  86.4  mins,  1.44  hour
+ ......... EPISODE =  6200 ......... Current Time =  09:35:53  ..... ELAPSED TIME =  5330.95  Seconds,  88.85  mins,  1.48  hour
+ ......... EPISODE =  6400 ......... Current Time =  09:38:20  ..... ELAPSED TIME =  5478.08  Seconds,  91.3  mins,  1.52  hour
+ ......... EPISODE =  6600 ......... Current Time =  09:40:38  ..... ELAPSED TIME =  5616.04  Seconds,  93.6  mins,  1.56  hour
+ ......... EPISODE =  6800 ......... Current Time =  09:42:38  ..... ELAPSED TIME =  5735.82  Seconds,  95.6  mins,  1.59  hour
+ ......... EPISODE =  7000 ......... Current Time =  09:44:54  ..... ELAPSED TIME =  5871.69  Seconds,  97.86  mins,  1.63  hour
+ ......... EPISODE =  7200 ......... Current Time =  09:46:53  ..... ELAPSED TIME =  5991.09  Seconds,  99.85  mins,  1.66  hour
+ ......... EPISODE =  7400 ......... Current Time =  09:48:45  ..... ELAPSED TIME =  6102.98  Seconds,  101.72  mins,  1.7  hour
+ ......... EPISODE =  7600 ......... Current Time =  09:50:55  ..... ELAPSED TIME =  6232.22  Seconds,  103.87  mins,  1.73  hour
+ ......... EPISODE =  7800 ......... Current Time =  09:53:03  ..... ELAPSED TIME =  6360.44  Seconds,  106.01  mins,  1.77  hour
+ ......... EPISODE =  8000 ......... Current Time =  09:55:03  ..... ELAPSED TIME =  6480.99  Seconds,  108.02  mins,  1.8  hour
+ ......... EPISODE =  8200 ......... Current Time =  09:57:15  ..... ELAPSED TIME =  6612.72  Seconds,  110.21  mins,  1.84  hour
+ ......... EPISODE =  8400 ......... Current Time =  09:59:05  ..... ELAPSED TIME =  6723.05  Seconds,  112.05  mins,  1.87  hour
+ ......... EPISODE =  8600 ......... Current Time =  10:01:07  ..... ELAPSED TIME =  6844.27  Seconds,  114.07  mins,  1.9  hour
+ ......... EPISODE =  8800 ......... Current Time =  10:03:08  ..... ELAPSED TIME =  6965.76  Seconds,  116.1  mins,  1.93  hour
+ ......... EPISODE =  9000 ......... Current Time =  10:05:15  ..... ELAPSED TIME =  7092.72  Seconds,  118.21  mins,  1.97  hour
+ ......... EPISODE =  9200 ......... Current Time =  10:07:19  ..... ELAPSED TIME =  7216.73  Seconds,  120.28  mins,  2.0  hour
+ ......... EPISODE =  9400 ......... Current Time =  10:09:27  ..... ELAPSED TIME =  7344.95  Seconds,  122.42  mins,  2.04  hour
+ ......... EPISODE =  9600 ......... Current Time =  10:11:08  ..... ELAPSED TIME =  7445.68  Seconds,  124.09  mins,  2.07  hour
+ ......... EPISODE =  9800 ......... Current Time =  10:13:09  ..... ELAPSED TIME =  7566.35  Seconds,  126.11  mins,  2.1  hour
+ ......... EPISODE =  10000 ......... Current Time =  10:15:05  ..... ELAPSED TIME =  7682.55  Seconds,  128.04  mins,  2.13  hour
+......... TOTAL RUNs =  1
+
+********** INFO:
+ Episode:  1 
+ Distance:  0 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.0 
+ Throughput:  0.0 
+ Interference on Neighbor UEs:  0.0
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ New Cell: 0 
+ Next State 
+ Action_power:  80.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ New Cell: 0 
+ Next State 
+ Action_power:  80.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ New Cell: 0 
+ Next State 
+ Action_power:  80.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ New Cell: 0 
+ Next State 
+ Action_power:  80.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ New Cell: 0 
+ Next State 
+ Action_power:  80.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ New Cell: 0 
+ Next State 
+ Action_power:  80.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ New Cell: 0 
+ Next State 
+ Action_power:  80.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  8 
+ New Cell: 0 
+ Next State 
+ Action_power:  80.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+tested_policy_feature_expectation:  [7.97205593 0.         0.20408463 1.69240374 0.04415432]
+
+weights:  [ 0.01387616  0.35508936 -7.89200524  0.79576868 -8.23227419] 
+ weights_norm:  [ 0.00121323  0.0310464  -0.69001875  0.06957615 -0.71976936] 
+
+...... Learner =  10   Hyper Distance =  0.13261291392221486
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 13              
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer started.
+Quadratic to conic reformulation started.
+Quadratic to conic reformulation terminated. Time: 0.00    
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 13              
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 8               
+Optimizer  - solved problem         : the dual        
+Optimizer  - Constraints            : 5
+Optimizer  - Cones                  : 1
+Optimizer  - Scalar variables       : 18                conic                  : 6               
+Optimizer  - Semi-definite variables: 0                 scalarized             : 0               
+Factor     - setup time             : 0.00              dense det. time        : 0.00            
+Factor     - ML order time          : 0.00              GP order time          : 0.00            
+Factor     - nonzeros before factor : 15                after factor           : 15              
+Factor     - dense dim.             : 0                 flops                  : 3.75e+02        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   1.0e+00  1.0e+00  2.0e+00  0.00e+00   5.000000000e-01   0.000000000e+00   1.0e+00  0.01  
+1   2.8e-01  2.8e-01  1.3e+00  -1.52e+00  1.443985224e+01   3.372237720e+01   2.8e-01  0.01  
+2   1.4e-01  1.4e-01  1.2e-01  2.96e-01   4.040420055e+01   3.468356303e+01   1.4e-01  0.01  
+3   1.3e-02  1.3e-02  9.2e-03  1.90e-01   1.352569796e+02   1.352612863e+02   1.3e-02  0.01  
+4   1.3e-03  1.3e-03  2.1e-04  1.19e+00   1.323340122e+02   1.322398929e+02   1.3e-03  0.01  
+5   2.1e-04  2.1e-04  1.5e-05  1.04e+00   1.327117115e+02   1.327009687e+02   2.1e-04  0.01  
+6   3.5e-06  3.5e-06  3.2e-08  1.00e+00   1.329100022e+02   1.329098482e+02   3.5e-06  0.01  
+7   8.9e-08  8.9e-08  1.4e-10  1.00e+00   1.329118377e+02   1.329118351e+02   8.9e-08  0.01  
+8   1.4e-08  1.4e-08  8.8e-12  1.00e+00   1.329119023e+02   1.329119021e+02   1.4e-08  0.01  
+9   5.1e-10  5.1e-10  7.3e-14  1.00e+00   1.329119173e+02   1.329119173e+02   5.1e-10  0.01  
+Optimizer terminated. Time: 0.01    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 1.3291191730e+02    nrm: 8e+00    Viol.  con: 2e-09    var: 0e+00  
+  Dual.    obj: 1.3291191736e+02    nrm: 1e+02    Viol.  con: 8e-09    var: 3e-04  
+Optimization status is:  optimal
+
+weights:  [-0.04270723  0.38609262 -8.04639941  0.7947666  -8.20882625] 
+ weights_norm:  [-0.00370441  0.03348957 -0.69794247  0.06893784 -0.71203133] 
+
+......... TOTAL EPOCHS =  10002
+ ......... EPISODE =  200 ......... Current Time =  10:17:09  ..... ELAPSED TIME =  123.64  Seconds,  2.06  mins,  0.03  hour
+ ......... EPISODE =  400 ......... Current Time =  10:19:07  ..... ELAPSED TIME =  241.45  Seconds,  4.02  mins,  0.07  hour
+ ......... EPISODE =  600 ......... Current Time =  10:20:55  ..... ELAPSED TIME =  349.36  Seconds,  5.82  mins,  0.1  hour
+ ......... EPISODE =  800 ......... Current Time =  10:22:59  ..... ELAPSED TIME =  473.14  Seconds,  7.89  mins,  0.13  hour
+ ......... EPISODE =  1000 ......... Current Time =  10:24:58  ..... ELAPSED TIME =  592.27  Seconds,  9.87  mins,  0.16  hour
+ ......... EPISODE =  1200 ......... Current Time =  10:26:55  ..... ELAPSED TIME =  709.34  Seconds,  11.82  mins,  0.2  hour
+ ......... EPISODE =  1400 ......... Current Time =  10:29:02  ..... ELAPSED TIME =  836.97  Seconds,  13.95  mins,  0.23  hour
+ ......... EPISODE =  1600 ......... Current Time =  10:31:10  ..... ELAPSED TIME =  964.18  Seconds,  16.07  mins,  0.27  hour
+ ......... EPISODE =  1800 ......... Current Time =  10:33:46  ..... ELAPSED TIME =  1120.35  Seconds,  18.67  mins,  0.31  hour
+ ......... EPISODE =  2000 ......... Current Time =  10:36:34  ..... ELAPSED TIME =  1288.63  Seconds,  21.48  mins,  0.36  hour
+ ......... EPISODE =  2200 ......... Current Time =  10:39:08  ..... ELAPSED TIME =  1442.52  Seconds,  24.04  mins,  0.4  hour
+ ......... EPISODE =  2400 ......... Current Time =  10:41:45  ..... ELAPSED TIME =  1599.11  Seconds,  26.65  mins,  0.44  hour
+ ......... EPISODE =  2600 ......... Current Time =  10:44:24  ..... ELAPSED TIME =  1758.81  Seconds,  29.31  mins,  0.49  hour
+ ......... EPISODE =  2800 ......... Current Time =  10:47:39  ..... ELAPSED TIME =  1953.25  Seconds,  32.55  mins,  0.54  hour
+ ......... EPISODE =  3000 ......... Current Time =  10:50:55  ..... ELAPSED TIME =  2149.45  Seconds,  35.82  mins,  0.6  hour
+ ......... EPISODE =  3200 ......... Current Time =  10:54:09  ..... ELAPSED TIME =  2343.72  Seconds,  39.06  mins,  0.65  hour
+ ......... EPISODE =  3400 ......... Current Time =  10:57:42  ..... ELAPSED TIME =  2556.02  Seconds,  42.6  mins,  0.71  hour
+ ......... EPISODE =  3600 ......... Current Time =  11:00:54  ..... ELAPSED TIME =  2748.75  Seconds,  45.81  mins,  0.76  hour
+ ......... EPISODE =  3800 ......... Current Time =  11:04:16  ..... ELAPSED TIME =  2950.6  Seconds,  49.18  mins,  0.82  hour
+ ......... EPISODE =  4000 ......... Current Time =  11:07:55  ..... ELAPSED TIME =  3169.76  Seconds,  52.83  mins,  0.88  hour
+ ......... EPISODE =  4200 ......... Current Time =  11:12:00  ..... ELAPSED TIME =  3414.35  Seconds,  56.91  mins,  0.95  hour
+ ......... EPISODE =  4400 ......... Current Time =  11:15:28  ..... ELAPSED TIME =  3622.46  Seconds,  60.37  mins,  1.01  hour
+ ......... EPISODE =  4600 ......... Current Time =  11:19:38  ..... ELAPSED TIME =  3872.19  Seconds,  64.54  mins,  1.08  hour
+ ......... EPISODE =  4800 ......... Current Time =  11:23:22  ..... ELAPSED TIME =  4096.44  Seconds,  68.27  mins,  1.14  hour
+ ......... EPISODE =  5000 ......... Current Time =  11:27:01  ..... ELAPSED TIME =  4315.38  Seconds,  71.92  mins,  1.2  hour
+ ......... EPISODE =  5200 ......... Current Time =  11:29:44  ..... ELAPSED TIME =  4478.16  Seconds,  74.64  mins,  1.24  hour
+ ......... EPISODE =  5400 ......... Current Time =  11:32:08  ..... ELAPSED TIME =  4622.05  Seconds,  77.03  mins,  1.28  hour
+ ......... EPISODE =  5600 ......... Current Time =  11:34:42  ..... ELAPSED TIME =  4776.72  Seconds,  79.61  mins,  1.33  hour
+ ......... EPISODE =  5800 ......... Current Time =  11:37:03  ..... ELAPSED TIME =  4917.67  Seconds,  81.96  mins,  1.37  hour
+ ......... EPISODE =  6000 ......... Current Time =  11:38:58  ..... ELAPSED TIME =  5032.4  Seconds,  83.87  mins,  1.4  hour
+ ......... EPISODE =  6200 ......... Current Time =  11:40:58  ..... ELAPSED TIME =  5152.79  Seconds,  85.88  mins,  1.43  hour
+ ......... EPISODE =  6400 ......... Current Time =  11:42:50  ..... ELAPSED TIME =  5264.02  Seconds,  87.73  mins,  1.46  hour
+ ......... EPISODE =  6600 ......... Current Time =  11:44:44  ..... ELAPSED TIME =  5378.66  Seconds,  89.64  mins,  1.49  hour
+ ......... EPISODE =  6800 ......... Current Time =  11:46:32  ..... ELAPSED TIME =  5486.8  Seconds,  91.45  mins,  1.52  hour
+ ......... EPISODE =  7000 ......... Current Time =  11:48:05  ..... ELAPSED TIME =  5579.56  Seconds,  92.99  mins,  1.55  hour
+ ......... EPISODE =  7200 ......... Current Time =  11:49:56  ..... ELAPSED TIME =  5690.55  Seconds,  94.84  mins,  1.58  hour
+ ......... EPISODE =  7400 ......... Current Time =  11:51:43  ..... ELAPSED TIME =  5797.29  Seconds,  96.62  mins,  1.61  hour
+ ......... EPISODE =  7600 ......... Current Time =  11:53:54  ..... ELAPSED TIME =  5928.34  Seconds,  98.81  mins,  1.65  hour
+ ......... EPISODE =  7800 ......... Current Time =  11:55:37  ..... ELAPSED TIME =  6031.92  Seconds,  100.53  mins,  1.68  hour
+ ......... EPISODE =  8000 ......... Current Time =  11:57:25  ..... ELAPSED TIME =  6139.39  Seconds,  102.32  mins,  1.71  hour
+ ......... EPISODE =  8200 ......... Current Time =  11:59:25  ..... ELAPSED TIME =  6258.98  Seconds,  104.32  mins,  1.74  hour
+ ......... EPISODE =  8400 ......... Current Time =  12:01:04  ..... ELAPSED TIME =  6358.3  Seconds,  105.97  mins,  1.77  hour
+ ......... EPISODE =  8600 ......... Current Time =  12:02:50  ..... ELAPSED TIME =  6464.94  Seconds,  107.75  mins,  1.8  hour
+ ......... EPISODE =  8800 ......... Current Time =  12:04:39  ..... ELAPSED TIME =  6573.74  Seconds,  109.56  mins,  1.83  hour
+ ......... EPISODE =  9000 ......... Current Time =  12:06:18  ..... ELAPSED TIME =  6672.65  Seconds,  111.21  mins,  1.85  hour
+ ......... EPISODE =  9200 ......... Current Time =  12:08:13  ..... ELAPSED TIME =  6787.35  Seconds,  113.12  mins,  1.89  hour
+ ......... EPISODE =  9400 ......... Current Time =  12:09:58  ..... ELAPSED TIME =  6892.62  Seconds,  114.88  mins,  1.91  hour
+ ......... EPISODE =  9600 ......... Current Time =  12:11:43  ..... ELAPSED TIME =  6997.83  Seconds,  116.63  mins,  1.94  hour
+ ......... EPISODE =  9800 ......... Current Time =  12:13:21  ..... ELAPSED TIME =  7095.57  Seconds,  118.26  mins,  1.97  hour
+ ......... EPISODE =  10000 ......... Current Time =  12:14:52  ..... ELAPSED TIME =  7186.4  Seconds,  119.77  mins,  2.0  hour
+......... TOTAL RUNs =  1
+
+********** INFO:
+ Episode:  1 
+ Distance:  0 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.0 
+ Throughput:  0.0 
+ Interference on Neighbor UEs:  0.0
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ New Cell: 0 
+ Next State 
+ Action_power:  80.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  1 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ New Cell: 0 
+ Next State 
+ Action_power:  80.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  2 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ New Cell: 0 
+ Next State 
+ Action_power:  80.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  3 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ New Cell: 0 
+ Next State 
+ Action_power:  80.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  4 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ New Cell: 0 
+ Next State 
+ Action_power:  80.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  5 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ New Cell: 0 
+ Next State 
+ Action_power:  80.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  6 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ New Cell: 0 
+ Next State 
+ Action_power:  80.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  7 
+ Current Cell: 0 
+ Current State 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+********** INFO:
+ Episode:  1 
+ Distance:  8 
+ New Cell: 0 
+ Next State 
+ Action_power:  80.0 
+ Interference on UAV:  7.098102146436035 
+ SINR:  0.03161234513603479 
+ Throughput:  0.32883646422954 
+ Interference on Neighbor UEs:  1.5623488657437943
+
+tested_policy_feature_expectation:  [7.97205593 0.         0.20408463 1.69240374 0.04415432]
+
+weights:  [-0.04270723  0.38609262 -8.04639941  0.7947666  -8.20882625] 
+ weights_norm:  [-0.00370441  0.03348957 -0.69794247  0.06893784 -0.71203133] 
+
+...... Learner =  11   Hyper Distance =  0.17347945192419448
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 14              
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer started.
+Quadratic to conic reformulation started.
+Quadratic to conic reformulation terminated. Time: 0.00    
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 14              
+  Cones                  : 0               
+  Scalar variables       : 5               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 8               
+Optimizer  - solved problem         : the dual        
+Optimizer  - Constraints            : 5
+Optimizer  - Cones                  : 1
+Optimizer  - Scalar variables       : 18                conic                  : 6               
+Optimizer  - Semi-definite variables: 0                 scalarized             : 0               
+Factor     - setup time             : 0.00              dense det. time        : 0.00            
+Factor     - ML order time          : 0.00              GP order time          : 0.00            
+Factor     - nonzeros before factor : 15                after factor           : 15              
+Factor     - dense dim.             : 0                 flops                  : 3.75e+02        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   1.0e+00  1.0e+00  2.0e+00  0.00e+00   5.000000000e-01   0.000000000e+00   1.0e+00  0.01  
+1   2.8e-01  2.8e-01  1.3e+00  -1.52e+00  1.443985224e+01   3.372237720e+01   2.8e-01  0.01  
+2   1.4e-01  1.4e-01  1.2e-01  2.96e-01   4.040420055e+01   3.468356303e+01   1.4e-01  0.01  
+3   1.3e-02  1.3e-02  9.2e-03  1.90e-01   1.352569796e+02   1.352612863e+02   1.3e-02  0.01  
+4   1.3e-03  1.3e-03  2.1e-04  1.19e+00   1.323340122e+02   1.322398929e+02   1.3e-03  0.01  
+5   2.1e-04  2.1e-04  1.5e-05  1.04e+00   1.327117115e+02   1.327009687e+02   2.1e-04  0.01  
+6   3.5e-06  3.5e-06  3.2e-08  1.00e+00   1.329100022e+02   1.329098482e+02   3.5e-06  0.01  
+7   8.9e-08  8.9e-08  1.4e-10  1.00e+00   1.329118377e+02   1.329118351e+02   8.9e-08  0.01  
+8   1.4e-08  1.4e-08  8.8e-12  1.00e+00   1.329119023e+02   1.329119021e+02   1.4e-08  0.01  
+9   5.1e-10  5.1e-10  7.2e-14  1.00e+00   1.329119173e+02   1.329119173e+02   5.1e-10  0.01  
+Optimizer terminated. Time: 0.01    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 1.3291191730e+02    nrm: 8e+00    Viol.  con: 2e-09    var: 0e+00  
+  Dual.    obj: 1.3291191736e+02    nrm: 1e+02    Viol.  con: 8e-09    var: 3e-04  
+Optimization status is:  optimal
+
+weights:  [-0.04270723  0.38609262 -8.04639941  0.7947666  -8.20882625] 
+ weights_norm:  [-0.00370441  0.03348957 -0.69794247  0.06893784 -0.71203133] 
+
+......... TOTAL EPOCHS =  10002
+Traceback (most recent call last):
+  File "/home/alireza/Downloads/Inverse_RL_UAV/code/main.py", line 63, in <module>
+    inverse_rl(uav_main, ues_objects_main, ax_ues_main, cells_objects_main)
+  File "/home/alireza/Downloads/Inverse_RL_UAV/code/inverserl.py", line 136, in inverse_rl
+    iter_optimization)
+  File "/home/alireza/Downloads/Inverse_RL_UAV/code/inverserl.py", line 708, in learner_lfa_ql_unlimited_dist
+    std_scale)
+  File "/home/alireza/Downloads/Inverse_RL_UAV/code/inverserl.py", line 486, in update_sgd_models
+    sgd_models[action].partial_fit(features_state_scaled, [target])
+  File "/home/alireza/.local/lib/python3.6/site-packages/sklearn/linear_model/_stochastic_gradient.py", line 1185, in partial_fit
+    intercept_init=None)
+  File "/home/alireza/.local/lib/python3.6/site-packages/sklearn/linear_model/_stochastic_gradient.py", line 1152, in _partial_fit
+    sample_weight, max_iter)
+  File "/home/alireza/.local/lib/python3.6/site-packages/sklearn/linear_model/_stochastic_gradient.py", line 1282, in _fit_regressor
+    dataset, intercept_decay = make_dataset(X, y, sample_weight)
+  File "/home/alireza/.local/lib/python3.6/site-packages/sklearn/linear_model/_base.py", line 81, in make_dataset
+    seed = rng.randint(1, np.iinfo(np.int32).max)
+KeyboardInterrupt
+
+Process finished with exit code 1
